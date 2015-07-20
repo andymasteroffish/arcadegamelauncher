@@ -1,2 +1,1 @@
-# arcadegamelauncher
-a thing to launch your games.
+You can use this to launch your games. What a joy. What a pleasure.
