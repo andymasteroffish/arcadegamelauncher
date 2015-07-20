@@ -34,7 +34,6 @@ public:
     string name;
     string gamePath;
     int minNumPlayers, maxNumPlayers;
-    bool hasOnlinePlay;
     
     
     

@@ -64,8 +64,6 @@ bool GameIcon::parseInfo(string infoPath){
         gamePath = xml.getValue("PATH", "");
         minNumPlayers = xml.getValue("MIN_PLAYERS", 0);
         maxNumPlayers = xml.getValue("MAX_PLAYERS", 0);
-        hasOnlinePlay = xml.getValue("ONLINE", "False") == "True";
-        
     }else{
         cout<<"we got a big fucking issue"<<endl;
         return false;
@@ -78,7 +76,6 @@ bool GameIcon::parseInfo(string infoPath){
     cout<<"----------"<<endl;
     cout<<name<<endl<<gamePath<<endl;
     cout<<minNumPlayers<<" - "<<maxNumPlayers<<" players"<<endl;
-    cout<<"online: "<< (hasOnlinePlay ? "yes" : "no") <<endl;
     
     //if it got here, there were no issues
     return true;

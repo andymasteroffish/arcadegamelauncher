@@ -268,8 +268,12 @@ void ofApp::makeIcon(string path){
         }
     }
     
+    if (imagePath == ""){
+        imagePath = "default_thumb.png";
+    }
+    
     //only make it if we have the necessary info
-    if (imagePath != "" && infoPath != ""){
+    if (infoPath != ""){
         GameIcon newIcon;
         //try to set it up, and if it has all necessary components, add it to the vector
         if(newIcon.setup(imagePath, infoPath, baseIconWidth, baseIconHeight)){
