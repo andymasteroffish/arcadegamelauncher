@@ -61,7 +61,7 @@ bool GameIcon::parseInfo(string infoPath){
     ofxXmlSettings xml;
     if (xml.load(infoPath)){
         name = xml.getValue("NAME", "UNKNOWN");
-        gamePath = xml.getValue("PATH", "");
+        gamePath = "\""+ xml.getValue("PATH", "") + "\"";
         minNumPlayers = xml.getValue("MIN_PLAYERS", 0);
         maxNumPlayers = xml.getValue("MAX_PLAYERS", 0);
     }else{
@@ -81,3 +81,38 @@ bool GameIcon::parseInfo(string infoPath){
     return true;
     
 }
+
+
+
+
+ofColor GameIcon::getAvgCol(){
+    
+    
+    float hue = 0;
+    float sat = 0;
+    float bri = 0;
+    
+    for (int i=0; i<20; i++){
+        int x = ofRandom(thumbnail.width);
+        int y = ofRandom(thumbnail.height);
+        ofColor col = thumbnail.getColor(x, y);
+        hue += col.getHue();
+        sat += col.getSaturation();
+        bri += col.getBrightness();
+    }
+    
+    hue /= 20;
+    sat /= 20;
+    bri /= 20;
+    
+    ofColor thisCol;
+    thisCol.setHsb(hue, sat, bri);
+    
+    return thisCol;
+    
+}
+
+
+
+
+

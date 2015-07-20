@@ -23,6 +23,8 @@ public:
     
     bool parseInfo(string infoPath);
     
+    ofColor getAvgCol();
+    
     //displaying
     ofImage thumbnail;
     float scale;

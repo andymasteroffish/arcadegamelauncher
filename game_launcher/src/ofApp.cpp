@@ -31,14 +31,21 @@ void ofApp::setup(){
     
     cursorPos = 0;
     
-    
-    
+    bgCol = bgTargetCol;
     
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
     scrollPos = (1-scrollXeno) * scrollPos + scrollXeno * targetScrollPos;
+    
+    //xeno the background color
+    for (int i=0; i<3; i++){
+        bgCol[i] = (1-scrollXeno) * bgCol[i] + scrollXeno * bgTargetCol[i];
+    }
+    ofColor thisBackground;
+    thisBackground.setHsb(bgCol[0], bgCol[1], bgCol[2]);
+    ofBackground(thisBackground);
 }
 
 //--------------------------------------------------------------
@@ -94,7 +101,7 @@ void ofApp::keyPressed(int key){
         icons[cursorPos].launch();
     }
     
-    cout<<key<<endl;
+    //cout<<key<<endl;
 }
 
 //--------------------------------------------------------------
@@ -167,6 +174,11 @@ void ofApp::moveCursor(int xDir, int yDir){
     
     //set us scrolling
     setScrollTarget();
+    
+    ofColor newBGColor = icons[cursorPos].getAvgCol() ;
+    bgTargetCol[0] = newBGColor.getHue();
+    bgTargetCol[1] = newBGColor.getSaturation();
+    bgTargetCol[2] = newBGColor.getBrightness();
 }
 
 //--------------------------------------------------------------

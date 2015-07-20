@@ -46,4 +46,7 @@ public:
     float scrollXeno;
     float targetScrollOffset;
     float scrollMaxPadding;
+    
+    //fucking around with the background color
+    ofVec3f bgCol, bgTargetCol;
 };
