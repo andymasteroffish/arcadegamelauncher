@@ -7,8 +7,11 @@ void ofApp::setup(){
     
     ofBackground( 250, 230, 255);
     
-    debugHideIcons = true;
+    debugHideIcons = false;
     
+    controllerManager.setup();
+    
+    optionsBar.setup(&controllerManager);
     
     baseIconWidth = 315;
     baseIconHeight = 250;
@@ -49,17 +52,54 @@ void ofApp::update(){
     deltaTime = ofGetElapsedTimef() - prevFrameTime;
     prevFrameTime = ofGetElapsedTimef();
     
+    //update the controllers and see what the user has done
+    controllerManager.update();
+    
+    //move our scroll
     scrollPos = (1-scrollXeno) * scrollPos + scrollXeno * targetScrollPos;
     
+    //update everything that gets updted no matter what
     background.update(deltaTime);
     
-    //xeno the background color
-//    for (int i=0; i<3; i++){
-//        bgCol[i] = (1-scrollXeno) * bgCol[i] + scrollXeno * bgTargetCol[i];
-//    }
-//    ofColor thisBackground;
-//    thisBackground.setHsb(bgCol[0], bgCol[1], bgCol[2]);
-//    ofBackground(thisBackground);
+    
+    //and the state specific ones
+    if (curState == STATE_HOME){
+        checkControl();
+    }
+    else if (curState == STATE_OPTIONS){
+        optionsBar.update(deltaTime);
+        if (optionsBar.isDone){
+            closeOptionsBar();
+        }
+    }
+    
+    
+}
+
+//--------------------------------------------------------------
+void ofApp::checkControl(){
+    
+    if (controllerManager.isButtonPressed(BUTTON_UP)){
+        moveCursor(0, -1);
+    }
+    if (controllerManager.isButtonPressed(BUTTON_DOWN)){
+        moveCursor(0, 1);
+    }
+    if (controllerManager.isButtonPressed(BUTTON_LEFT)){
+        moveCursor(-1, 0);
+    }
+    if (controllerManager.isButtonPressed(BUTTON_RIGHT)){
+        moveCursor(1, 0);
+    }
+    if (controllerManager.isButtonPressed(BUTTON_A)){
+        icons[cursorPos].launch();
+    }
+    
+    //did they launch the options bar?
+    if (controllerManager.isButtonPressed(BUTTON_Y)){
+        openOptionsBar();
+    }
+    
 }
 
 //--------------------------------------------------------------
@@ -78,6 +118,8 @@ void ofApp::draw(){
     
     ofPopMatrix();
     
+    optionsBar.draw();
+    
     string debugInfo = "";
     debugInfo += "scale: "+ofToString(iconScale)+"\n";
     debugInfo += "cols: "+ofToString(cols)+"\n";
@@ -90,6 +132,9 @@ void ofApp::draw(){
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
+    
+    controllerManager.keyPressed(key);
+    
     if (key == 'f' || key == 'F'){
         ofToggleFullscreen();
     }
@@ -102,22 +147,6 @@ void ofApp::keyPressed(int key){
     }
     
     
-    if (key == 357){
-        moveCursor(0, -1);
-    }
-    if (key == 359){
-        moveCursor(0, 1);
-    }
-    if (key == 356){
-        moveCursor(-1, 0);
-    }
-    if (key == 358){
-        moveCursor(1, 0);
-    }
-    
-    if (key == ' ' || key == 13){
-        icons[cursorPos].launch();
-    }
     
     
     if (key == 'i'){
@@ -130,7 +159,7 @@ void ofApp::keyPressed(int key){
 
 //--------------------------------------------------------------
 void ofApp::keyReleased(int key){
-
+    controllerManager.keyReleased(key);
 }
 
 //--------------------------------------------------------------
@@ -203,6 +232,17 @@ void ofApp::moveCursor(int xDir, int yDir){
     bgTargetCol[0] = newBGColor.getHue();
     bgTargetCol[1] = newBGColor.getSaturation();
     bgTargetCol[2] = newBGColor.getBrightness();
+}
+
+//--------------------------------------------------------------
+void ofApp::openOptionsBar(){
+    curState = STATE_OPTIONS;
+    optionsBar.reset();
+}
+
+//--------------------------------------------------------------
+void ofApp::closeOptionsBar(){
+    curState = STATE_HOME;
 }
 
 //--------------------------------------------------------------

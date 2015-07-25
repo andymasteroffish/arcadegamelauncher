@@ -26,7 +26,7 @@ void Background::update(float deltaTime){
 
 void Background::draw(float scrollPos){
     
-    cout<<"scroll "<<scrollPos<<endl;
+    //cout<<"scroll "<<scrollPos<<endl;
     
     ofSetColor(255,0,0);
    
@@ -72,7 +72,7 @@ void Background::draw(float scrollPos){
 }
 
 void Background::drawSection(float yPos, int sectionID){
-    cout<<"draw "<<sectionID<<endl;
+    //cout<<"draw "<<sectionID<<endl;
     
     int hue = (sectionID*33)%256;
     

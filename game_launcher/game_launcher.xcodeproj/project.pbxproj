@@ -12,6 +12,8 @@
 		0A458BCC1B5C8C2100C44767 /* tinyxmlerror.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A458BC61B5C8C2100C44767 /* tinyxmlerror.cpp */; };
 		0A458BCD1B5C8C2100C44767 /* tinyxmlparser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A458BC71B5C8C2100C44767 /* tinyxmlparser.cpp */; };
 		0A458BCE1B5C8C2100C44767 /* ofxXmlSettings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A458BC91B5C8C2100C44767 /* ofxXmlSettings.cpp */; };
+		0A4864281B6348390018AB41 /* ControllerManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A4864261B6348390018AB41 /* ControllerManager.cpp */; };
+		0A48642D1B634D5E0018AB41 /* OptionsBar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A48642B1B634D5E0018AB41 /* OptionsBar.cpp */; };
 		0A68FA331B5F0A850091A108 /* Background.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A68FA311B5F0A850091A108 /* Background.cpp */; };
 		BBAB23CB13894F3D00AA2426 /* GLUT.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BBAB23BE13894E4700AA2426 /* GLUT.framework */; };
 		E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4328148138ABC890047C5CB /* openFrameworksDebug.a */; };
@@ -74,6 +76,11 @@
 		0A458BC91B5C8C2100C44767 /* ofxXmlSettings.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxXmlSettings.cpp; sourceTree = "<group>"; };
 		0A458BCA1B5C8C2100C44767 /* ofxXmlSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxXmlSettings.h; sourceTree = "<group>"; };
 		0A458BD51B5C944500C44767 /* game_launcherDebug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = game_launcherDebug.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A4864261B6348390018AB41 /* ControllerManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ControllerManager.cpp; sourceTree = "<group>"; };
+		0A4864271B6348390018AB41 /* ControllerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControllerManager.h; sourceTree = "<group>"; };
+		0A48642A1B6348F10018AB41 /* BasicInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BasicInfo.h; sourceTree = "<group>"; };
+		0A48642B1B634D5E0018AB41 /* OptionsBar.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OptionsBar.cpp; sourceTree = "<group>"; };
+		0A48642C1B634D5E0018AB41 /* OptionsBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionsBar.h; sourceTree = "<group>"; };
 		0A68FA311B5F0A850091A108 /* Background.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Background.cpp; sourceTree = "<group>"; };
 		0A68FA321B5F0A850091A108 /* Background.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Background.h; sourceTree = "<group>"; };
 		BBAB23BE13894E4700AA2426 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = ../../../libs/glut/lib/osx/GLUT.framework; sourceTree = "<group>"; };
@@ -226,6 +233,7 @@
 		E4B69E1C0A3A1BDC003C02F2 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				0A48642A1B6348F10018AB41 /* BasicInfo.h */,
 				E4B69E1D0A3A1BDC003C02F2 /* main.cpp */,
 				E4B69E1F0A3A1BDC003C02F2 /* ofApp.h */,
 				E4B69E1E0A3A1BDC003C02F2 /* ofApp.cpp */,
@@ -233,6 +241,10 @@
 				0A458BBE1B5C6F7100C44767 /* GameIcon.cpp */,
 				0A68FA321B5F0A850091A108 /* Background.h */,
 				0A68FA311B5F0A850091A108 /* Background.cpp */,
+				0A4864271B6348390018AB41 /* ControllerManager.h */,
+				0A4864261B6348390018AB41 /* ControllerManager.cpp */,
+				0A48642C1B634D5E0018AB41 /* OptionsBar.h */,
+				0A48642B1B634D5E0018AB41 /* OptionsBar.cpp */,
 			);
 			path = src;
 			sourceTree = SOURCE_ROOT;
@@ -339,7 +351,9 @@
 				0A458BCC1B5C8C2100C44767 /* tinyxmlerror.cpp in Sources */,
 				0A458BCD1B5C8C2100C44767 /* tinyxmlparser.cpp in Sources */,
 				0A458BC01B5C6F7100C44767 /* GameIcon.cpp in Sources */,
+				0A4864281B6348390018AB41 /* ControllerManager.cpp in Sources */,
 				0A458BCE1B5C8C2100C44767 /* ofxXmlSettings.cpp in Sources */,
+				0A48642D1B634D5E0018AB41 /* OptionsBar.cpp in Sources */,
 				0A68FA331B5F0A850091A108 /* Background.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

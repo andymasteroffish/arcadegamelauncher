@@ -1,14 +1,20 @@
 #pragma once
 
 #include "ofMain.h"
+#include "BasicInfo.h"
+
 #include "GameIcon.h"
+#include "OptionsBar.h"
 
 #include "Background.h"
+
+#include "ControllerManager.h"
 
 class ofApp : public ofBaseApp{
 public:
     void setup();
     void update();
+    void checkControl();
     void draw();
     
     void keyPressed(int key);
@@ -22,6 +28,9 @@ public:
     
     void moveCursor(int xDir, int yDir);
     
+    void openOptionsBar();
+    void closeOptionsBar();
+    
     void setIconScale(float prc);
     void setSpacing();
     void setScrollTarget();
@@ -29,8 +38,14 @@ public:
     void checkForGames();
     void makeIcon(string path);
     
+    //what we're doing right now
+    GAME_STATE curState;
+    
     //timing
     float prevFrameTime, deltaTime;
+    
+    //sorting
+    OptionsBar optionsBar;
     
     //icons
     vector<GameIcon> icons;
@@ -50,6 +65,9 @@ public:
     float scrollXeno;
     float targetScrollOffset;
     float scrollMaxPadding;
+    
+    //controllers
+    ControllerManager controllerManager;
     
     //fucking around with the background color
     ofVec3f bgCol, bgTargetCol;
