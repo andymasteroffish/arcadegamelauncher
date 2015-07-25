@@ -3,6 +3,7 @@
 #include "ofMain.h"
 #include "GameIcon.h"
 
+#include "Background.h"
 
 class ofApp : public ofBaseApp{
 public:
@@ -28,7 +29,10 @@ public:
     void checkForGames();
     void makeIcon(string path);
     
+    //timing
+    float prevFrameTime, deltaTime;
     
+    //icons
     vector<GameIcon> icons;
     int cursorPos;
     
@@ -49,4 +53,11 @@ public:
     
     //fucking around with the background color
     ofVec3f bgCol, bgTargetCol;
+    
+    //background
+    Background background;
+    
+    
+    //debug
+    bool debugHideIcons;
 };

@@ -5,6 +5,10 @@ void ofApp::setup(){
     ofEnableSmoothing();
     ofEnableAlphaBlending();
     
+    ofBackground( 250, 230, 255);
+    
+    debugHideIcons = true;
+    
     
     baseIconWidth = 315;
     baseIconHeight = 250;
@@ -31,31 +35,45 @@ void ofApp::setup(){
     
     cursorPos = 0;
     
+    background.setup();
+    
     bgCol = bgTargetCol;
     
+    prevFrameTime = ofGetElapsedTimef();
+    deltaTime = 0;
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
+    
+    deltaTime = ofGetElapsedTimef() - prevFrameTime;
+    prevFrameTime = ofGetElapsedTimef();
+    
     scrollPos = (1-scrollXeno) * scrollPos + scrollXeno * targetScrollPos;
     
+    background.update(deltaTime);
+    
     //xeno the background color
-    for (int i=0; i<3; i++){
-        bgCol[i] = (1-scrollXeno) * bgCol[i] + scrollXeno * bgTargetCol[i];
-    }
-    ofColor thisBackground;
-    thisBackground.setHsb(bgCol[0], bgCol[1], bgCol[2]);
-    ofBackground(thisBackground);
+//    for (int i=0; i<3; i++){
+//        bgCol[i] = (1-scrollXeno) * bgCol[i] + scrollXeno * bgTargetCol[i];
+//    }
+//    ofColor thisBackground;
+//    thisBackground.setHsb(bgCol[0], bgCol[1], bgCol[2]);
+//    ofBackground(thisBackground);
 }
 
 //--------------------------------------------------------------
 void ofApp::draw(){
     
+    background.draw(scrollPos);
+    
     ofPushMatrix();
     ofTranslate(0, -scrollPos);
     
-    for (int i=0; i<icons.size(); i++){
-        icons[i].draw( i==cursorPos );
+    if (!debugHideIcons){
+        for (int i=0; i<icons.size(); i++){
+            icons[i].draw( i==cursorPos );
+        }
     }
     
     ofPopMatrix();
@@ -100,6 +118,12 @@ void ofApp::keyPressed(int key){
     if (key == ' ' || key == 13){
         icons[cursorPos].launch();
     }
+    
+    
+    if (key == 'i'){
+        debugHideIcons = !debugHideIcons;
+    }
+    
     
     //cout<<key<<endl;
 }
