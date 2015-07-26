@@ -14,7 +14,7 @@
 class SortingButtonToggle : public SortingButtonBase{
 public:
     
-    void setup(string _displayName, string _xmlName, int startingVal, bool _canBeNeutral);
+    void setup(string _displayName, string _xmlName, bool startingVal, bool _canBeNeutral);
     
     void typeUpdate();
     
