@@ -19,8 +19,11 @@ class GameIcon{
 public:
     
     bool setup(string imagePath, string _infoPath, int _wdith, int _height);
+    void update(float delta);
     void draw(bool isSelected);
     void launch();
+    
+    void setNewPos(ofVec2f _newPos, bool doAnimation);
     
     bool parseInfo();
     
@@ -41,6 +44,11 @@ public:
     int minNumPlayers, maxNumPlayers;
     
     bool isHidden;  //when a search would exclude this game
+    
+    //animation for setting new positions
+    bool doingNewPosMove;
+    float newPosMoveTime, newPosMoveTimer;
+    ofVec2f newPosMoveStart, newPosMoveTarget;
     
     
     

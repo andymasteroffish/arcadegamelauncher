@@ -29,11 +29,12 @@ void OptionsBar::setup(ControllerManager * _controllerManager){
 //    }
 }
 
-void OptionsBar::reset(){
+void OptionsBar::reset(GameIcon * _gameSelectedWhenOpened){
     isActive = true;
     isDone = false;
     timer = 0;
     sortGamesFlag = false;
+    gameSelectedWhenOpened = _gameSelectedWhenOpened;
 }
 
 void OptionsBar::update(float deltaTime){
@@ -108,7 +109,6 @@ bool OptionsBar::checkGame(ofxXmlSettings gameXML){
     
     for (int i=0; i<sortingButtons.size(); i++){
         if (sortingButtons[i]->checkGame(gameXML) == false){
-            cout<<"murder noise"<<endl;
             return false;
         }
     }

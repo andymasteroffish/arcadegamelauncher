@@ -12,6 +12,7 @@
 #include "ofMain.h"
 #include "ControllerManager.h"
 #include "ofxXmlSettings.h"
+#include "GameIcon.h"
 
 #include "SortingButtonBase.h"
 #include "SortingButtonToggle.h"
@@ -20,7 +21,7 @@ class OptionsBar{
 public:
     
     void setup(ControllerManager * _controllerManager);
-    void reset();
+    void reset(GameIcon * _gameSelectedWhenOpened);
     void update(float deltaTime);
     void draw();
     
@@ -38,6 +39,10 @@ public:
     ControllerManager * controllerManager;
     
     bool isDone;
+    
+    
+    GameIcon * gameSelectedWhenOpened;
+    
     
     vector<SortingButtonBase *> sortingButtons;
     float sortingButtonSpacingY;

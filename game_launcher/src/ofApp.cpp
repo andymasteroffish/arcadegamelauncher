@@ -1,5 +1,21 @@
 #include "ofApp.h"
 
+
+// sorting icons
+bool iconSortAlphabetical(  GameIcon * a, GameIcon * b ) {
+    
+    if (!a->isHidden && b->isHidden){
+        return true;
+    }
+    
+    if (a->isHidden == b->isHidden){
+        return a->name.compare(b->name) < 0;
+    }
+    
+    return false;
+}
+
+
 //--------------------------------------------------------------
 void ofApp::setup(){
     ofEnableSmoothing();
@@ -61,6 +77,13 @@ void ofApp::update(){
     //update everything that gets updted no matter what
     background.update(deltaTime);
     
+    for (int i=0; i<icons.size(); i++){
+        icons[i]->update(deltaTime);
+    }
+    
+    if (icons[cursorPos]->doingNewPosMove){
+        setScrollTarget();
+    }
     
     //and the state specific ones
     if (curState == STATE_HOME){
@@ -96,7 +119,7 @@ void ofApp::checkControl(){
         moveCursor(1, 0);
     }
     if (controllerManager.isButtonPressed(BUTTON_A)){
-        icons[cursorPos].launch();
+        icons[cursorPos]->launch();
     }
     
     //did they launch the options bar?
@@ -116,7 +139,7 @@ void ofApp::draw(){
     
     if (!debugHideIcons){
         for (int i=0; i<icons.size(); i++){
-            icons[i].draw( i==cursorPos );
+            icons[i]->draw( i==cursorPos );
         }
     }
     
@@ -232,16 +255,12 @@ void ofApp::moveCursor(int xDir, int yDir){
     //set us scrolling
     setScrollTarget();
     
-    ofColor newBGColor = icons[cursorPos].getAvgCol() ;
-    bgTargetCol[0] = newBGColor.getHue();
-    bgTargetCol[1] = newBGColor.getSaturation();
-    bgTargetCol[2] = newBGColor.getBrightness();
 }
 
 //--------------------------------------------------------------
 void ofApp::openOptionsBar(){
     curState = STATE_OPTIONS;
-    optionsBar.reset();
+    optionsBar.reset(icons[cursorPos]);
 }
 
 //--------------------------------------------------------------
@@ -258,7 +277,7 @@ void ofApp::setIconScale(float prc){
     
     //set the icons
     for (int i=0; i<icons.size(); i++){
-        icons[i].scale = iconScale;
+        icons[i]->scale = iconScale;
     }
     
     //cout<<"scale now "<<iconScale<<endl;
@@ -283,20 +302,20 @@ void ofApp::setSpacing(){
         int thisCol = i%cols;
         int thisRow = i/cols;
         
-        icons[i].pos.x = startX + thisCol*iconWidth + thisCol*iconSpacing;
-        icons[i].pos.y = thisRow*iconHeight + thisRow*iconSpacing;
+        ofVec2f newPos;
+        
+        newPos.x = startX + thisCol*iconWidth + thisCol*iconSpacing;
+        newPos.y = thisRow*iconHeight + thisRow*iconSpacing;
+        
+        icons[i]->setNewPos(newPos, true);
     }
-    
-    
-    //set us scrolling
-    setScrollTarget();
     
 }
 
 
 //--------------------------------------------------------------
 void ofApp::setScrollTarget(){
-    targetScrollPos = icons[cursorPos].pos.y - targetScrollOffset + iconHeight/2;
+    targetScrollPos = icons[cursorPos]->pos.y - targetScrollOffset + iconHeight/2;
     if (targetScrollPos < -scrollMaxPadding){
         targetScrollPos = -scrollMaxPadding;
     }
@@ -354,9 +373,9 @@ void ofApp::makeIcon(string path){
     
     //only make it if we have the necessary info
     if (infoPath != ""){
-        GameIcon newIcon;
+        GameIcon * newIcon = new GameIcon();
         //try to set it up, and if it has all necessary components, add it to the vector
-        if(newIcon.setup(imagePath, infoPath, baseIconWidth, baseIconHeight)){
+        if(newIcon->setup(imagePath, infoPath, baseIconWidth, baseIconHeight)){
             icons.push_back(newIcon);
         }
     }
@@ -367,18 +386,35 @@ void ofApp::makeIcon(string path){
 
 //--------------------------------------------------------------
 void ofApp::sortGames(){
-    cout<<"sort it"<<endl;
-    
-    string prevSelectionName = icons[cursorPos].name;
+    //cout<<"sort it"<<endl;
     
     for (int i=0; i<icons.size(); i++){
         ofxXmlSettings gameXML;
-        gameXML.loadFile(icons[i].infoPath);
+        gameXML.loadFile(icons[i]->infoPath);
         
-        icons[i].isHidden = optionsBar.checkGame(gameXML) == false;
+        icons[i]->isHidden = optionsBar.checkGame(gameXML) == false;
     }
     
+    //sort it all
+    sort(icons.begin(), icons.end(), iconSortAlphabetical);
+    
+    
     //let's see if we can have the cursor still on this game
+    if (optionsBar.gameSelectedWhenOpened->isHidden){
+        cursorPos = 0;
+    }
+    //if it is not hidden, find it and select it
+    else{
+        for (int i=0; i<icons.size(); i++){
+            if (optionsBar.gameSelectedWhenOpened == icons[i]){
+                cursorPos = i;
+            }
+        }
+    }
+    
+    
+    //move them around
+    setSpacing();
     
 }
 

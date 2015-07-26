@@ -50,7 +50,7 @@ public:
     OptionsBar optionsBar;
     
     //icons
-    vector<GameIcon> icons;
+    vector<GameIcon *> icons;
     int cursorPos;
     
     //spacing it

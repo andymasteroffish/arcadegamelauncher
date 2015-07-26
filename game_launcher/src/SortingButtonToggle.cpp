@@ -66,11 +66,8 @@ void SortingButtonToggle::buttonPressed(BUTTON_TYPE button){
 
 bool SortingButtonToggle::checkGame(ofxXmlSettings gameXML){
     
-    cout<<"checking "<<gameXML.getValue("NAME", "unkown")<<endl;
-    
     //if it is set to neutral, always let the game pass
     if (canBeNeutral && value == 2){
-        cout<<"it ok"<<endl;
         return true;
     }
     

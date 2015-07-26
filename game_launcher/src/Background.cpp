@@ -64,10 +64,6 @@ void Background::draw(float scrollPos){
         
     }
     
-    ofSetColor(255,0,0);
-    ofCircle(0, startPos, 20);
-    ofSetColor(0, 255, 0);
-    //ofCircle(0, testPos, 20);
     
 }
 

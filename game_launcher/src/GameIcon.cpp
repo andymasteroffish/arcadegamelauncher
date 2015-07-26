@@ -17,10 +17,25 @@ bool GameIcon::setup(string imagePath, string _infoPath, int _wdith, int _height
     thumbnail.loadImage(imagePath);
     scale = 1;
     
+    newPosMoveTime = ofRandom(0.15, 0.3);
+    
     isHidden = false;
     
     infoPath = _infoPath;
     return parseInfo();
+}
+
+void GameIcon::update(float deltaTime){
+    if (doingNewPosMove){
+        newPosMoveTimer += deltaTime;
+        if (newPosMoveTimer >= newPosMoveTime){
+            doingNewPosMove = false;
+            pos = newPosMoveTarget;
+        }else{
+            float prc = newPosMoveTimer/newPosMoveTime;
+            pos = (1-prc) * newPosMoveStart + prc * newPosMoveTarget;
+        }
+    }
 }
 
 void GameIcon::draw(bool isSelected){
@@ -60,6 +75,18 @@ void GameIcon::launch(){
     string command = "open " + gamePath;
     system(command.c_str());
 #endif
+}
+
+void GameIcon::setNewPos(ofVec2f _newPos, bool doAnimation){
+    if (!doAnimation){
+        pos = _newPos;
+        return;
+    }
+    
+    doingNewPosMove = true;
+    newPosMoveTarget = _newPos;
+    newPosMoveStart = pos;
+    newPosMoveTimer = 0;
 }
 
 bool GameIcon::parseInfo(){
