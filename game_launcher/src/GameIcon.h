@@ -14,14 +14,15 @@
 
 #define USING_MAC
 
+
 class GameIcon{
 public:
     
-    bool setup(string imagePath, string infoPath, int _wdith, int _height);
+    bool setup(string imagePath, string _infoPath, int _wdith, int _height);
     void draw(bool isSelected);
     void launch();
     
-    bool parseInfo(string infoPath);
+    bool parseInfo();
     
     ofColor getAvgCol();
     
@@ -32,12 +33,14 @@ public:
     int width, height;
     ofVec2f pos;
     
-    //game info
-    ofxXmlSettings xml;
+    string infoPath;
     
+    //game info
     string name;
     string gamePath;
     int minNumPlayers, maxNumPlayers;
+    
+    bool isHidden;  //when a search would exclude this game
     
     
     

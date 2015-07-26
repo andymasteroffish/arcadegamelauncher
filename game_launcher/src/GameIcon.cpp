@@ -9,7 +9,7 @@
 #include "GameIcon.h"
 
 
-bool GameIcon::setup(string imagePath, string infoPath, int _wdith, int _height){
+bool GameIcon::setup(string imagePath, string _infoPath, int _wdith, int _height){
     
     width = _wdith;
     height = _height;
@@ -17,10 +17,16 @@ bool GameIcon::setup(string imagePath, string infoPath, int _wdith, int _height)
     thumbnail.loadImage(imagePath);
     scale = 1;
     
-    return parseInfo(infoPath);
+    isHidden = false;
+    
+    infoPath = _infoPath;
+    return parseInfo();
 }
 
 void GameIcon::draw(bool isSelected){
+    
+    float fadeValue = isHidden ? 0.25 : 1;
+    
     ofPushMatrix();
     ofTranslate(pos.x, pos.y);
     ofScale(scale, scale);
@@ -34,13 +40,13 @@ void GameIcon::draw(bool isSelected){
     }
     
     //draw the pic
-    ofSetColor(255);
+    ofSetColor(255, 255*fadeValue);
     thumbnail.draw(0, 0, width, height);
     
     //draw the name
-    ofSetColor(255, 200);
+    ofSetColor(255, 200 * fadeValue);
     ofRect(0, height-17, width, 17);
-    ofSetColor(0);
+    ofSetColor(0, 255 * fadeValue);
     ofDrawBitmapString(name, 3, height-2);
     
     ofPopMatrix();
@@ -56,14 +62,16 @@ void GameIcon::launch(){
 #endif
 }
 
-bool GameIcon::parseInfo(string infoPath){
-    
+bool GameIcon::parseInfo(){
+    ofxXmlSettings xml;
     
     if (xml.load(infoPath)){
         name = xml.getValue("NAME", "UNKNOWN");
         gamePath = "\""+ xml.getValue("PATH", "") + "\"";
         minNumPlayers = xml.getValue("MIN_PLAYERS", 0);
         maxNumPlayers = xml.getValue("MAX_PLAYERS", 0);
+        
+        cout<<"is load "<<xml.bDocLoaded<<endl;
     }else{
         cout<<"we got a big fucking issue"<<endl;
         return false;
@@ -77,9 +85,9 @@ bool GameIcon::parseInfo(string infoPath){
     cout<<name<<endl<<gamePath<<endl;
     cout<<minNumPlayers<<" - "<<maxNumPlayers<<" players"<<endl;
     
+    
     //if it got here, there were no issues
     return true;
-    
 }
 
 

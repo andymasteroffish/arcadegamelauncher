@@ -19,14 +19,14 @@ void OptionsBar::setup(ControllerManager * _controllerManager){
     //make our buttons
     {
         SortingButtonToggle * newButton = new SortingButtonToggle();
-        newButton->setup("Co-op", "COOP", true, true);
+        newButton->setup("Co-op", "COOP", 2, true);
         sortingButtons.push_back(newButton);
     }
-    {
-        SortingButtonToggle * newButton = new SortingButtonToggle();
-        newButton->setup("Testing", "testo", true, false);
-        sortingButtons.push_back(newButton);
-    }
+//    {
+//        SortingButtonToggle * newButton = new SortingButtonToggle();
+//        newButton->setup("Testing", "testo", 1, false);
+//        sortingButtons.push_back(newButton);
+//    }
 }
 
 void OptionsBar::reset(){
@@ -102,3 +102,19 @@ void OptionsBar::draw(){
     }
     
 }
+
+
+bool OptionsBar::checkGame(ofxXmlSettings gameXML){
+    
+    for (int i=0; i<sortingButtons.size(); i++){
+        if (sortingButtons[i]->checkGame(gameXML) == false){
+            cout<<"murder noise"<<endl;
+            return false;
+        }
+    }
+    
+    return true;
+    
+}
+
+

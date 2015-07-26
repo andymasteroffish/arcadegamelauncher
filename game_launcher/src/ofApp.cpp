@@ -367,6 +367,18 @@ void ofApp::makeIcon(string path){
 
 //--------------------------------------------------------------
 void ofApp::sortGames(){
+    cout<<"sort it"<<endl;
+    
+    string prevSelectionName = icons[cursorPos].name;
+    
+    for (int i=0; i<icons.size(); i++){
+        ofxXmlSettings gameXML;
+        gameXML.loadFile(icons[i].infoPath);
+        
+        icons[i].isHidden = optionsBar.checkGame(gameXML) == false;
+    }
+    
+    //let's see if we can have the cursor still on this game
     
 }
 

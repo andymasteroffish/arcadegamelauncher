@@ -11,6 +11,7 @@
 
 #include "ofMain.h"
 #include "ControllerManager.h"
+#include "ofxXmlSettings.h"
 
 #include "SortingButtonBase.h"
 #include "SortingButtonToggle.h"
@@ -24,6 +25,8 @@ public:
     void draw();
     
     void scrollSelection(int dir);
+    
+    bool checkGame(ofxXmlSettings gameXML);
     
     
     bool isActive;
