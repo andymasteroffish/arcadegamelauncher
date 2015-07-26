@@ -68,6 +68,10 @@ void ofApp::update(){
     }
     else if (curState == STATE_OPTIONS){
         optionsBar.update(deltaTime);
+        if (optionsBar.sortGamesFlag){
+            optionsBar.sortGamesFlag = false;
+            sortGames();
+        }
         if (optionsBar.isDone){
             closeOptionsBar();
         }
@@ -359,6 +363,12 @@ void ofApp::makeIcon(string path){
     
 }
 
+
+
+//--------------------------------------------------------------
+void ofApp::sortGames(){
+    
+}
 
 
 

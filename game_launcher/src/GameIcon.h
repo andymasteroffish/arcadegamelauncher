@@ -33,6 +33,8 @@ public:
     ofVec2f pos;
     
     //game info
+    ofxXmlSettings xml;
+    
     string name;
     string gamePath;
     int minNumPlayers, maxNumPlayers;

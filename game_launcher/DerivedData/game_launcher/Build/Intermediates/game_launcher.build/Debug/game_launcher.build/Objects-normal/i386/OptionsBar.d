@@ -170,4 +170,4 @@ dependencies: \
   ../../../libs/openFrameworks/video/ofQTKitPlayer.h \
   ../../../libs/openFrameworks/3d/ofCamera.h \
   ../../../libs/openFrameworks/3d/ofEasyCam.h src/ControllerManager.h \
-  src/BasicInfo.h
+  src/BasicInfo.h src/SortingButtonBase.h src/SortingButtonToggle.h

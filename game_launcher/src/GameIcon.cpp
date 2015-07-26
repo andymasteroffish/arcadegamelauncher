@@ -58,7 +58,7 @@ void GameIcon::launch(){
 
 bool GameIcon::parseInfo(string infoPath){
     
-    ofxXmlSettings xml;
+    
     if (xml.load(infoPath)){
         name = xml.getValue("NAME", "UNKNOWN");
         gamePath = "\""+ xml.getValue("PATH", "") + "\"";

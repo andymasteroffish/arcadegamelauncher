@@ -38,6 +38,8 @@ public:
     void checkForGames();
     void makeIcon(string path);
     
+    void sortGames();
+    
     //what we're doing right now
     GAME_STATE curState;
     

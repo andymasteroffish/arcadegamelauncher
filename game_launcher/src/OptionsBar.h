@@ -12,6 +12,9 @@
 #include "ofMain.h"
 #include "ControllerManager.h"
 
+#include "SortingButtonBase.h"
+#include "SortingButtonToggle.h"
+
 class OptionsBar{
 public:
     
@@ -19,6 +22,8 @@ public:
     void reset();
     void update(float deltaTime);
     void draw();
+    
+    void scrollSelection(int dir);
     
     
     bool isActive;
@@ -30,6 +35,14 @@ public:
     ControllerManager * controllerManager;
     
     bool isDone;
+    
+    vector<SortingButtonBase *> sortingButtons;
+    float sortingButtonSpacingY;
+    
+    ofVec2f sortingButtonPadding;
+    
+    bool sortGamesFlag;
+    
     
     
 };

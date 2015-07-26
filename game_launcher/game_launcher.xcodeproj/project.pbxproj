@@ -15,6 +15,8 @@
 		0A4864281B6348390018AB41 /* ControllerManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A4864261B6348390018AB41 /* ControllerManager.cpp */; };
 		0A48642D1B634D5E0018AB41 /* OptionsBar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A48642B1B634D5E0018AB41 /* OptionsBar.cpp */; };
 		0A68FA331B5F0A850091A108 /* Background.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A68FA311B5F0A850091A108 /* Background.cpp */; };
+		0AEB661D1B65377500D02D68 /* SortingButtonBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0AEB661B1B65377500D02D68 /* SortingButtonBase.cpp */; };
+		0AEB66201B653B2B00D02D68 /* SortingButtonToggle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0AEB661E1B653B2B00D02D68 /* SortingButtonToggle.cpp */; };
 		BBAB23CB13894F3D00AA2426 /* GLUT.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BBAB23BE13894E4700AA2426 /* GLUT.framework */; };
 		E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4328148138ABC890047C5CB /* openFrameworksDebug.a */; };
 		E45BE97B0E8CC7DD009D7055 /* AGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9710E8CC7DD009D7055 /* AGL.framework */; };
@@ -83,6 +85,10 @@
 		0A48642C1B634D5E0018AB41 /* OptionsBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionsBar.h; sourceTree = "<group>"; };
 		0A68FA311B5F0A850091A108 /* Background.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Background.cpp; sourceTree = "<group>"; };
 		0A68FA321B5F0A850091A108 /* Background.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Background.h; sourceTree = "<group>"; };
+		0AEB661B1B65377500D02D68 /* SortingButtonBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SortingButtonBase.cpp; sourceTree = "<group>"; };
+		0AEB661C1B65377500D02D68 /* SortingButtonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SortingButtonBase.h; sourceTree = "<group>"; };
+		0AEB661E1B653B2B00D02D68 /* SortingButtonToggle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SortingButtonToggle.cpp; sourceTree = "<group>"; };
+		0AEB661F1B653B2B00D02D68 /* SortingButtonToggle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SortingButtonToggle.h; sourceTree = "<group>"; };
 		BBAB23BE13894E4700AA2426 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = ../../../libs/glut/lib/osx/GLUT.framework; sourceTree = "<group>"; };
 		E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = openFrameworksLib.xcodeproj; path = ../../../libs/openFrameworksCompiled/project/osx/openFrameworksLib.xcodeproj; sourceTree = SOURCE_ROOT; };
 		E45BE9710E8CC7DD009D7055 /* AGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AGL.framework; path = /System/Library/Frameworks/AGL.framework; sourceTree = "<absolute>"; };
@@ -161,6 +167,19 @@
 				0A458BCA1B5C8C2100C44767 /* ofxXmlSettings.h */,
 			);
 			path = src;
+			sourceTree = "<group>";
+		};
+		0AEB661A1B65374300D02D68 /* SortingOptions */ = {
+			isa = PBXGroup;
+			children = (
+				0A48642C1B634D5E0018AB41 /* OptionsBar.h */,
+				0A48642B1B634D5E0018AB41 /* OptionsBar.cpp */,
+				0AEB661C1B65377500D02D68 /* SortingButtonBase.h */,
+				0AEB661B1B65377500D02D68 /* SortingButtonBase.cpp */,
+				0AEB661F1B653B2B00D02D68 /* SortingButtonToggle.h */,
+				0AEB661E1B653B2B00D02D68 /* SortingButtonToggle.cpp */,
+			);
+			name = SortingOptions;
 			sourceTree = "<group>";
 		};
 		BB4B014C10F69532006C3DED /* addons */ = {
@@ -243,8 +262,7 @@
 				0A68FA311B5F0A850091A108 /* Background.cpp */,
 				0A4864271B6348390018AB41 /* ControllerManager.h */,
 				0A4864261B6348390018AB41 /* ControllerManager.cpp */,
-				0A48642C1B634D5E0018AB41 /* OptionsBar.h */,
-				0A48642B1B634D5E0018AB41 /* OptionsBar.cpp */,
+				0AEB661A1B65374300D02D68 /* SortingOptions */,
 			);
 			path = src;
 			sourceTree = SOURCE_ROOT;
@@ -345,6 +363,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AEB66201B653B2B00D02D68 /* SortingButtonToggle.cpp in Sources */,
+				0AEB661D1B65377500D02D68 /* SortingButtonBase.cpp in Sources */,
 				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
 				0A458BCB1B5C8C2100C44767 /* tinyxml.cpp in Sources */,
 				E4B69E210A3A1BDC003C02F2 /* ofApp.cpp in Sources */,
