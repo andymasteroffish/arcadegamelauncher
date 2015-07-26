@@ -9,14 +9,12 @@
 #include "SortingButtonToggle.h"
 
 
-void SortingButtonToggle::setup(string _displayName, string _xmlName, int startingVal, bool _canBeNeutral){
+void SortingButtonToggle::setup(string _displayName, string _xmlName){
     
     displayName = _displayName;
     xmlName = _xmlName;
     
-    canBeNeutral = _canBeNeutral;
-    
-    value = startingVal;
+    value = 0;
     
     buttonType = SORTING_BUTTON_TOGGLE;
     
@@ -36,13 +34,10 @@ void SortingButtonToggle::typeDraw(bool isSelected){
     string statusText = "";
     switch (value) {
         case 0:
-            statusText = "NO";
+            statusText = "DON'T CARE";
             break;
         case 1:
             statusText = "YES";
-            break;
-        case 2:
-            statusText = "ANY";
             break;
     }
     
@@ -53,11 +48,10 @@ void SortingButtonToggle::typeDraw(bool isSelected){
 
 void SortingButtonToggle::buttonPressed(BUTTON_TYPE button){
     
-    int maxVal = canBeNeutral ? 3 : 2;
     //just shift it between 1 and 0
     if (button == BUTTON_LEFT || button == BUTTON_RIGHT || button == BUTTON_A){
         
-        value = (value+1)%maxVal;
+        value = (value+1)%2;
         
     }
     
@@ -66,23 +60,14 @@ void SortingButtonToggle::buttonPressed(BUTTON_TYPE button){
 
 bool SortingButtonToggle::checkGame(ofxXmlSettings gameXML){
     
-    //if it is set to neutral, always let the game pass
-    if (canBeNeutral && value == 2){
+    //when unchecked, just let the game through
+    if (value == 0){
         return true;
     }
     
-    //otherwise chekc the value
-    //int thisVal =  gameXML.getValue(xmlName, 0);
+    //otherwise check the value
     bool gameVal = gameXML.getValue(xmlName, "FALSE") == "TRUE";
+    return gameVal;
     
-    if (gameVal && value == 1){
-        return true;
-    }
-    if (!gameVal && value == 0){
-        return true;
-    }
-    
-    
-    return false;
 }
 

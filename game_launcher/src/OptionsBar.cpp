@@ -19,14 +19,19 @@ void OptionsBar::setup(ControllerManager * _controllerManager){
     //make our buttons
     {
         SortingButtonToggle * newButton = new SortingButtonToggle();
-        newButton->setup("Co-op", "COOP", 2, true);
+        newButton->setup("Co-op", "COOP");
         sortingButtons.push_back(newButton);
     }
-//    {
-//        SortingButtonToggle * newButton = new SortingButtonToggle();
-//        newButton->setup("Testing", "testo", 1, false);
-//        sortingButtons.push_back(newButton);
-//    }
+    {
+        SortingButtonToggle * newButton = new SortingButtonToggle();
+        newButton->setup("Competitive", "COMPETITIVE");
+        sortingButtons.push_back(newButton);
+    }
+    {
+        SortingButtonNumber * newButton = new SortingButtonNumber();
+        newButton->setup("Num Players", "MIN_PLAYERS", "MAX_PLAYERS", 16);
+        sortingButtons.push_back(newButton);
+    }
 }
 
 void OptionsBar::reset(GameIcon * _gameSelectedWhenOpened){

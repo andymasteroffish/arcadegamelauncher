@@ -307,7 +307,8 @@ void ofApp::setSpacing(){
         newPos.x = startX + thisCol*iconWidth + thisCol*iconSpacing;
         newPos.y = thisRow*iconHeight + thisRow*iconSpacing;
         
-        icons[i]->setNewPos(newPos, true);
+        bool doAnimation = ofGetFrameNum() > 2;
+        icons[i]->setNewPos(newPos, doAnimation);
     }
     
 }
@@ -400,8 +401,14 @@ void ofApp::sortGames(){
     
     
     //let's see if we can have the cursor still on this game
+    //if it is hidden, find the last non-hidden game
     if (optionsBar.gameSelectedWhenOpened->isHidden){
-        cursorPos = 0;
+        for (int i=icons.size()-1; i>=0; i--){
+            if (!icons[i]->isHidden){
+                cursorPos = i;
+                break;
+            }
+        }
     }
     //if it is not hidden, find it and select it
     else{

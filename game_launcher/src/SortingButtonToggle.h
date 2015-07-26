@@ -14,7 +14,7 @@
 class SortingButtonToggle : public SortingButtonBase{
 public:
     
-    void setup(string _displayName, string _xmlName, bool startingVal, bool _canBeNeutral);
+    void setup(string _displayName, string _xmlName);
     
     void typeUpdate();
     
@@ -23,8 +23,6 @@ public:
     void buttonPressed(BUTTON_TYPE button);
     
     bool checkGame(ofxXmlSettings gameXML);
-    
-    bool canBeNeutral;
     
     
 };

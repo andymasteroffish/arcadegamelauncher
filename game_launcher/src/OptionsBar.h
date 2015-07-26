@@ -16,6 +16,7 @@
 
 #include "SortingButtonBase.h"
 #include "SortingButtonToggle.h"
+#include "SortingButtonNumber.h"
 
 class OptionsBar{
 public:

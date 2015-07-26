@@ -174,4 +174,4 @@ dependencies: \
   /Users/andywallace/Documents/of_v0.8.4_osx_release/apps/arcadegamelauncher/game_launcher/ofxXmlSettings/src/ofxXmlSettings.h \
   /Users/andywallace/Documents/of_v0.8.4_osx_release/apps/arcadegamelauncher/game_launcher/ofxXmlSettings/libs/tinyxml.h \
   src/OptionsBar.h src/ControllerManager.h src/SortingButtonBase.h \
-  src/SortingButtonToggle.h src/Background.h
+  src/SortingButtonToggle.h src/SortingButtonNumber.h src/Background.h
