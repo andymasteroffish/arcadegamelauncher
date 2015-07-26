@@ -98,7 +98,6 @@ bool GameIcon::parseInfo(){
         minNumPlayers = xml.getValue("MIN_PLAYERS", 0);
         maxNumPlayers = xml.getValue("MAX_PLAYERS", 0);
         
-        cout<<"is load "<<xml.bDocLoaded<<endl;
     }else{
         cout<<"we got a big fucking issue"<<endl;
         return false;
