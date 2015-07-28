@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		0A458BC01B5C6F7100C44767 /* GameIcon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A458BBE1B5C6F7100C44767 /* GameIcon.cpp */; };
-		0A458BCB1B5C8C2100C44767 /* tinyxml.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A458BC41B5C8C2100C44767 /* tinyxml.cpp */; };
-		0A458BCC1B5C8C2100C44767 /* tinyxmlerror.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A458BC61B5C8C2100C44767 /* tinyxmlerror.cpp */; };
-		0A458BCD1B5C8C2100C44767 /* tinyxmlparser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A458BC71B5C8C2100C44767 /* tinyxmlparser.cpp */; };
-		0A458BCE1B5C8C2100C44767 /* ofxXmlSettings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A458BC91B5C8C2100C44767 /* ofxXmlSettings.cpp */; };
 		0A4864281B6348390018AB41 /* ControllerManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A4864261B6348390018AB41 /* ControllerManager.cpp */; };
 		0A48642D1B634D5E0018AB41 /* OptionsBar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A48642B1B634D5E0018AB41 /* OptionsBar.cpp */; };
 		0A68FA331B5F0A850091A108 /* Background.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A68FA311B5F0A850091A108 /* Background.cpp */; };
+		0A7DE4D21B68465300E1A317 /* tinyxml.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A7DE4CB1B68465300E1A317 /* tinyxml.cpp */; };
+		0A7DE4D31B68465300E1A317 /* tinyxmlerror.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A7DE4CD1B68465300E1A317 /* tinyxmlerror.cpp */; };
+		0A7DE4D41B68465300E1A317 /* tinyxmlparser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A7DE4CE1B68465300E1A317 /* tinyxmlparser.cpp */; };
+		0A7DE4D51B68465300E1A317 /* ofxXmlSettings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A7DE4D01B68465300E1A317 /* ofxXmlSettings.cpp */; };
 		0AEB661D1B65377500D02D68 /* SortingButtonBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0AEB661B1B65377500D02D68 /* SortingButtonBase.cpp */; };
 		0AEB66201B653B2B00D02D68 /* SortingButtonToggle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0AEB661E1B653B2B00D02D68 /* SortingButtonToggle.cpp */; };
 		0AEB66231B656ED600D02D68 /* SortingButtonNumber.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0AEB66211B656ED600D02D68 /* SortingButtonNumber.cpp */; };
@@ -72,12 +72,6 @@
 /* Begin PBXFileReference section */
 		0A458BBE1B5C6F7100C44767 /* GameIcon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameIcon.cpp; sourceTree = "<group>"; };
 		0A458BBF1B5C6F7100C44767 /* GameIcon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameIcon.h; sourceTree = "<group>"; };
-		0A458BC41B5C8C2100C44767 /* tinyxml.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tinyxml.cpp; sourceTree = "<group>"; };
-		0A458BC51B5C8C2100C44767 /* tinyxml.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tinyxml.h; sourceTree = "<group>"; };
-		0A458BC61B5C8C2100C44767 /* tinyxmlerror.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tinyxmlerror.cpp; sourceTree = "<group>"; };
-		0A458BC71B5C8C2100C44767 /* tinyxmlparser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tinyxmlparser.cpp; sourceTree = "<group>"; };
-		0A458BC91B5C8C2100C44767 /* ofxXmlSettings.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxXmlSettings.cpp; sourceTree = "<group>"; };
-		0A458BCA1B5C8C2100C44767 /* ofxXmlSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxXmlSettings.h; sourceTree = "<group>"; };
 		0A458BD51B5C944500C44767 /* game_launcherDebug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = game_launcherDebug.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A4864261B6348390018AB41 /* ControllerManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ControllerManager.cpp; sourceTree = "<group>"; };
 		0A4864271B6348390018AB41 /* ControllerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControllerManager.h; sourceTree = "<group>"; };
@@ -86,6 +80,12 @@
 		0A48642C1B634D5E0018AB41 /* OptionsBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionsBar.h; sourceTree = "<group>"; };
 		0A68FA311B5F0A850091A108 /* Background.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Background.cpp; sourceTree = "<group>"; };
 		0A68FA321B5F0A850091A108 /* Background.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Background.h; sourceTree = "<group>"; };
+		0A7DE4CB1B68465300E1A317 /* tinyxml.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tinyxml.cpp; sourceTree = "<group>"; };
+		0A7DE4CC1B68465300E1A317 /* tinyxml.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tinyxml.h; sourceTree = "<group>"; };
+		0A7DE4CD1B68465300E1A317 /* tinyxmlerror.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tinyxmlerror.cpp; sourceTree = "<group>"; };
+		0A7DE4CE1B68465300E1A317 /* tinyxmlparser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tinyxmlparser.cpp; sourceTree = "<group>"; };
+		0A7DE4D01B68465300E1A317 /* ofxXmlSettings.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxXmlSettings.cpp; sourceTree = "<group>"; };
+		0A7DE4D11B68465300E1A317 /* ofxXmlSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxXmlSettings.h; sourceTree = "<group>"; };
 		0AEB661B1B65377500D02D68 /* SortingButtonBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SortingButtonBase.cpp; sourceTree = "<group>"; };
 		0AEB661C1B65377500D02D68 /* SortingButtonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SortingButtonBase.h; sourceTree = "<group>"; };
 		0AEB661E1B653B2B00D02D68 /* SortingButtonToggle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SortingButtonToggle.cpp; sourceTree = "<group>"; };
@@ -143,31 +143,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0A458BC21B5C8C2100C44767 /* ofxXmlSettings */ = {
+		0A7DE4C91B68465300E1A317 /* ofxXmlSettings_mac */ = {
 			isa = PBXGroup;
 			children = (
-				0A458BC31B5C8C2100C44767 /* libs */,
-				0A458BC81B5C8C2100C44767 /* src */,
+				0A7DE4CA1B68465300E1A317 /* libs */,
+				0A7DE4CF1B68465300E1A317 /* src */,
 			);
-			path = ofxXmlSettings;
+			name = ofxXmlSettings_mac;
+			path = src/ofxXmlSettings_mac;
 			sourceTree = "<group>";
 		};
-		0A458BC31B5C8C2100C44767 /* libs */ = {
+		0A7DE4CA1B68465300E1A317 /* libs */ = {
 			isa = PBXGroup;
 			children = (
-				0A458BC41B5C8C2100C44767 /* tinyxml.cpp */,
-				0A458BC51B5C8C2100C44767 /* tinyxml.h */,
-				0A458BC61B5C8C2100C44767 /* tinyxmlerror.cpp */,
-				0A458BC71B5C8C2100C44767 /* tinyxmlparser.cpp */,
+				0A7DE4CB1B68465300E1A317 /* tinyxml.cpp */,
+				0A7DE4CC1B68465300E1A317 /* tinyxml.h */,
+				0A7DE4CD1B68465300E1A317 /* tinyxmlerror.cpp */,
+				0A7DE4CE1B68465300E1A317 /* tinyxmlparser.cpp */,
 			);
 			path = libs;
 			sourceTree = "<group>";
 		};
-		0A458BC81B5C8C2100C44767 /* src */ = {
+		0A7DE4CF1B68465300E1A317 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				0A458BC91B5C8C2100C44767 /* ofxXmlSettings.cpp */,
-				0A458BCA1B5C8C2100C44767 /* ofxXmlSettings.h */,
+				0A7DE4D01B68465300E1A317 /* ofxXmlSettings.cpp */,
+				0A7DE4D11B68465300E1A317 /* ofxXmlSettings.h */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -190,7 +191,7 @@
 		BB4B014C10F69532006C3DED /* addons */ = {
 			isa = PBXGroup;
 			children = (
-				0A458BC21B5C8C2100C44767 /* ofxXmlSettings */,
+				0A7DE4C91B68465300E1A317 /* ofxXmlSettings_mac */,
 			);
 			name = addons;
 			sourceTree = "<group>";
@@ -369,18 +370,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				0AEB66201B653B2B00D02D68 /* SortingButtonToggle.cpp in Sources */,
+				0A7DE4D21B68465300E1A317 /* tinyxml.cpp in Sources */,
 				0AEB661D1B65377500D02D68 /* SortingButtonBase.cpp in Sources */,
 				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
-				0A458BCB1B5C8C2100C44767 /* tinyxml.cpp in Sources */,
+				0A7DE4D41B68465300E1A317 /* tinyxmlparser.cpp in Sources */,
 				E4B69E210A3A1BDC003C02F2 /* ofApp.cpp in Sources */,
-				0A458BCC1B5C8C2100C44767 /* tinyxmlerror.cpp in Sources */,
-				0A458BCD1B5C8C2100C44767 /* tinyxmlparser.cpp in Sources */,
 				0A458BC01B5C6F7100C44767 /* GameIcon.cpp in Sources */,
 				0A4864281B6348390018AB41 /* ControllerManager.cpp in Sources */,
-				0A458BCE1B5C8C2100C44767 /* ofxXmlSettings.cpp in Sources */,
 				0A48642D1B634D5E0018AB41 /* OptionsBar.cpp in Sources */,
 				0AEB66231B656ED600D02D68 /* SortingButtonNumber.cpp in Sources */,
 				0A68FA331B5F0A850091A108 /* Background.cpp in Sources */,
+				0A7DE4D31B68465300E1A317 /* tinyxmlerror.cpp in Sources */,
+				0A7DE4D51B68465300E1A317 /* ofxXmlSettings.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -16,6 +16,11 @@ void OptionsBar::setup(ControllerManager * _controllerManager){
     sortingButtonSpacingY = 30;
     sortingButtonPadding.set(30, 50);
     
+    isActive = false;
+    isDone = false;
+    timer = 0;
+    sortGamesFlag = false;
+    
     //make our buttons
     {
         SortingButtonToggle * newButton = new SortingButtonToggle();

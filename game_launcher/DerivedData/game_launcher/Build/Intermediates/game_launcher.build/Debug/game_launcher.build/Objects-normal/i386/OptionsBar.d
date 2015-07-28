@@ -171,7 +171,7 @@ dependencies: \
   ../../../libs/openFrameworks/3d/ofCamera.h \
   ../../../libs/openFrameworks/3d/ofEasyCam.h src/ControllerManager.h \
   src/BasicInfo.h \
-  /Users/andywallace/Documents/of_v0.8.4_osx_release/apps/arcadegamelauncher/game_launcher/ofxXmlSettings/src/ofxXmlSettings.h \
-  /Users/andywallace/Documents/of_v0.8.4_osx_release/apps/arcadegamelauncher/game_launcher/ofxXmlSettings/libs/tinyxml.h \
+  /Users/andywallace/Documents/of_v0.8.4_osx_release/apps/arcadegamelauncher/game_launcher/src/ofxXmlSettings_mac/src/ofxXmlSettings.h \
+  /Users/andywallace/Documents/of_v0.8.4_osx_release/apps/arcadegamelauncher/game_launcher/src/ofxXmlSettings_mac/libs/tinyxml.h \
   src/GameIcon.h src/SortingButtonBase.h src/SortingButtonToggle.h \
   src/SortingButtonNumber.h

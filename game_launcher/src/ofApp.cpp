@@ -25,6 +25,8 @@ void ofApp::setup(){
     
     debugHideIcons = false;
     
+    curState = STATE_HOME;
+    
     controllerManager.setup();
     
     optionsBar.setup(&controllerManager);
