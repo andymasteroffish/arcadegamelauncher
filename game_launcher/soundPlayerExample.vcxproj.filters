@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{d8376475-7454-4a24-b08a-aac121d3ad6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons">
+      <UniqueIdentifier>{bd11bb2c-5f56-47e7-bde1-45f76a9ee060}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\OptionsBar.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SortingButtonBase.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SortingButtonNumber.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SortingButtonToggle.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Background.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ControllerManager.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameIcon.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\main.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ofApp.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ofxXmlSettings_win\libs\tinyxml.cpp">
+      <Filter>addons</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ofxXmlSettings_win\libs\tinyxmlerror.cpp">
+      <Filter>addons</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ofxXmlSettings_win\libs\tinyxmlparser.cpp">
+      <Filter>addons</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ofxXmlSettings_win\src\ofxXmlSettings.cpp">
+      <Filter>addons</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\ofApp.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\OptionsBar.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SortingButtonBase.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SortingButtonNumber.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SortingButtonToggle.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Background.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\BasicInfo.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ControllerManager.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameIcon.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ofxXmlSettings_win\libs\tinyxml.h">
+      <Filter>addons</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ofxXmlSettings_win\src\ofxXmlSettings.h">
+      <Filter>addons</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

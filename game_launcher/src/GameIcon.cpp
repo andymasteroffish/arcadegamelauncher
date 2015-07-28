@@ -92,7 +92,7 @@ void GameIcon::setNewPos(ofVec2f _newPos, bool doAnimation){
 bool GameIcon::parseInfo(){
     ofxXmlSettings xml;
     
-    if (xml.load(infoPath)){
+    if (xml.loadFile(infoPath)){
         name = xml.getValue("NAME", "UNKNOWN");
         gamePath = "\""+ xml.getValue("PATH", "") + "\"";
         minNumPlayers = xml.getValue("MIN_PLAYERS", 0);

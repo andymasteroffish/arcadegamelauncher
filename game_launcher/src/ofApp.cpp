@@ -181,7 +181,7 @@ void ofApp::keyPressed(int key){
     }
     
     
-    //cout<<key<<endl;
+    cout<<key<<endl;
 }
 
 //--------------------------------------------------------------

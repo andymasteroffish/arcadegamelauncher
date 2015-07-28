@@ -25,10 +25,10 @@ public:
     int spaceBetweenSections;
     
     int numPoints;
-    float sectionHeight = 300;
+    float sectionHeight;
     
-    float horzNoiseSpeed = 1;
-    float vertNoiseSpeed = 0.3;
+    float horzNoiseSpeed;
+    float vertNoiseSpeed;
     
 
     

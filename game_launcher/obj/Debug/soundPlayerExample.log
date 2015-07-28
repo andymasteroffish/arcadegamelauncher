@@ -1,0 +1,91 @@
+﻿Build started 9/24/2013 10:23:14 PM.
+     1>Project "C:\Users\Andy\Documents\of_v0.7.4_vs2010_release\apps\particleMaceWindows\ParticleMaceSoundPlayer\soundPlayerExample.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Touching "obj\Debug\soundPlayerExample.unsuccessfulbuild".
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I..\..\..\libs\openFrameworks /I..\..\..\libs\openFrameworks\graphics /I..\..\..\libs\openFrameworks\app /I..\..\..\libs\openFrameworks\sound /I..\..\..\libs\openFrameworks\utils /I..\..\..\libs\openFrameworks\communication /I..\..\..\libs\openFrameworks\video /I..\..\..\libs\openFrameworks\types /I..\..\..\libs\openFrameworks\math /I..\..\..\libs\openFrameworks\3d /I..\..\..\libs\openFrameworks\gl /I..\..\..\libs\openFrameworks\events /I..\..\..\libs\glut\include /I..\..\..\libs\rtAudio\include /I..\..\..\libs\quicktime\include /I..\..\..\libs\freetype\include /I..\..\..\libs\freetype\include\freetype2 /I..\..\..\libs\freeImage\include /I..\..\..\libs\fmodex\include /I..\..\..\libs\videoInput\include /I..\..\..\libs\glew\include\ /I..\..\..\libs\glu\include /I..\..\..\libs\tess2\include /I..\..\..\libs\cairo\include\cairo /I..\..\..\libs\poco\include /I..\..\..\addons /I..\..\..\addons\ofxGamepadFalcon\libs /I..\..\..\addons\ofxGamepadFalcon\src /I..\..\..\addons\ofxGamepadFalcon\libs\wgois /I..\..\..\addons\ofxGamepadFalcon\libs\wgois\include /I..\..\..\addons\ofxGamepadFalcon\libs\wgois\include\linux /I..\..\..\addons\ofxGamepadFalcon\libs\wgois\include\mac /I..\..\..\addons\ofxGamepadFalcon\libs\wgois\include\win32 /I..\..\..\addons\ofxGamepadFalcon\libs\wgois\lib /I..\..\..\addons\ofxGamepadFalcon\libs\wgois\lib\vs2008 /I..\..\..\addons\ofxGamepadFalcon\libs\wgois\lib\vs2010 /Isrc /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D POCO_STATIC /D CAIRO_WIN32_STATIC_BUILD /D DISABLE_SOME_FLOATING_POINT /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"obj\Debug\\" /Fd"obj\Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt src\Border.cpp src\CustomizeMenu.cpp src\EndGameManager.cpp src\FrontMenu.cpp src\FrozenText.cpp src\GameManager.cpp src\MissionManager.cpp src\ParticleMace.cpp src\Player.cpp src\SnitchFoe.cpp src\SoundManager.cpp src\Tutorial.cpp src\WeaponParticle.cpp src\main.cpp src\normalMissions.cpp src\particleMacePC.cpp src\spring.cpp
+     1>cl : Command line warning D9007: '/Gm' requires '/Zi or /ZI'; option ignored
+         Border.cpp
+         CustomizeMenu.cpp
+         EndGameManager.cpp
+         FrontMenu.cpp
+         FrozenText.cpp
+         GameManager.cpp
+         MissionManager.cpp
+         ParticleMace.cpp
+     1>src\ParticleMace.cpp(4729): warning C4805: '!=' : unsafe mix of type 'bool' and type 'int' in operation
+         Player.cpp
+         SnitchFoe.cpp
+         SoundManager.cpp
+         Tutorial.cpp
+         WeaponParticle.cpp
+         main.cpp
+         normalMissions.cpp
+         particleMacePC.cpp
+         spring.cpp
+         Generating Code...
+       ManifestResourceCompile:
+         All outputs are up-to-date.
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"bin\soundPlayerExample_debug.exe" /INCREMENTAL /NOLOGO /LIBPATH:..\..\..\libs\glut\lib\vs2010 /LIBPATH:..\..\..\libs\rtAudio\lib\vs2010 /LIBPATH:..\..\..\libs\FreeImage\lib\vs2010 /LIBPATH:..\..\..\libs\freetype\lib\vs2010 /LIBPATH:..\..\..\libs\quicktime\lib\vs2010 /LIBPATH:..\..\..\libs\fmodex\lib\vs2010 /LIBPATH:..\..\..\libs\videoInput\lib\vs2010 /LIBPATH:..\..\..\libs\cairo\lib\vs2010 /LIBPATH:..\..\..\libs\glew\lib\vs2010 /LIBPATH:..\..\..\libs\glu\lib\vs2010 /LIBPATH:..\..\..\libs\Poco\lib\vs2010 /LIBPATH:..\..\..\libs\tess2\lib\vs2010 "cairo-static.lib" "pixman-1.lib" msimg32.lib OpenGL32.lib GLu32.lib kernel32.lib setupapi.lib Vfw32.lib comctl32.lib glut32.lib rtAudioD.lib videoInput.lib libfreetype.lib FreeImage.lib qtmlClient.lib dsound.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib glew32s.lib fmodex_vc.lib glu32.lib PocoFoundationmdd.lib PocoNetmdd.lib PocoUtilmdd.lib PocoXMLmdd.lib Ws2_32.lib tess2.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /NODEFAULTLIB:PocoFoundationd.lib /NODEFAULTLIB:atlthunk.lib /NODEFAULTLIB:LIBC.lib /NODEFAULTLIB:LIBCMT /MANIFEST /ManifestFile:"obj\Debug\soundPlayerExample_debug.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\Andy\Documents\of_v0.7.4_vs2010_release\apps\particleMaceWindows\ParticleMaceSoundPlayer\bin\soundPlayerExample_debug_debugInfo.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE:NO /IMPLIB:"bin\soundPlayerExample_debug.lib" /MACHINE:X86 obj\Debug\soundPlayerExample_debug.exe.embed.manifest.res
+         obj\Debug\Border.obj
+         obj\Debug\CoopRegen.obj
+         obj\Debug\CustomizeMenu.obj
+         obj\Debug\DummyFoe.obj
+         obj\Debug\EndGameManager.obj
+         obj\Debug\Fizzle.obj
+         obj\Debug\Foe.obj
+         obj\Debug\FrontMenu.obj
+         obj\Debug\FrozenText.obj
+         obj\Debug\GameManager.obj
+         obj\Debug\JitterFoe.obj
+         obj\Debug\main.obj
+         obj\Debug\Mission.obj
+         obj\Debug\MissionManager.obj
+         obj\Debug\normalMissions.obj
+         obj\Debug\NormFoe.obj
+         obj\Debug\ofxGamepad.obj
+         obj\Debug\ofxGamepadCamera.obj
+         obj\Debug\ofxGamepadHandler.obj
+         obj\Debug\ofxGamepadLinux.obj
+         obj\Debug\ofxGamepadOIS.obj
+         obj\Debug\ofxShapeBatchRenderer.obj
+         obj\Debug\ofxXmlSettings.obj
+         obj\Debug\particle.obj
+         obj\Debug\ParticleMace.obj
+         obj\Debug\particleMacePC.obj
+         obj\Debug\Player.obj
+         obj\Debug\Rock.obj
+         obj\Debug\Slider.obj
+         obj\Debug\SnitchFoe.obj
+         obj\Debug\SoundManager.obj
+         obj\Debug\SpiralFoe.obj
+         obj\Debug\spring.obj
+         obj\Debug\tinyxml.obj
+         obj\Debug\tinyxmlerror.obj
+         obj\Debug\tinyxmlparser.obj
+         obj\Debug\Tutorial.obj
+         obj\Debug\WayPoint.obj
+         obj\Debug\WeaponParticle.obj
+         src\OIS_vs2010_static.lib
+         src\OIS_vs2010_static_d.lib
+         C:\Users\Andy\Documents\of_v0.7.4_vs2010_release\libs\openFrameworksCompiled\lib\vs2010\openframeworksLibDebug.lib
+     1>OIS_vs2010_static.lib(OISInputManager.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in Border.obj
+     1>OIS_vs2010_static.lib(OISEffect.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in Border.obj
+     1>OIS_vs2010_static.lib(OISForceFeedback.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in Border.obj
+     1>OIS_vs2010_static.lib(OISJoyStick.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in Border.obj
+     1>OIS_vs2010_static.lib(OISException.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in Border.obj
+     1>OIS_vs2010_static.lib(Win32InputManager.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in Border.obj
+     1>OIS_vs2010_static.lib(Win32KeyBoard.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in Border.obj
+     1>OIS_vs2010_static.lib(Win32Mouse.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in Border.obj
+     1>OIS_vs2010_static.lib(Win32JoyStick.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in Border.obj
+     1>OIS_vs2010_static.lib(OISKeyboard.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in Border.obj
+     1>OIS_vs2010_static.lib(Win32ForceFeedback.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in Border.obj
+            Creating library bin\soundPlayerExample_debug.lib and object bin\soundPlayerExample_debug.exp
+     1>LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
+     1>bin\soundPlayerExample_debug.exe : fatal error LNK1319: 11 mismatches detected
+     1>Done Building Project "C:\Users\Andy\Documents\of_v0.7.4_vs2010_release\apps\particleMaceWindows\ParticleMaceSoundPlayer\soundPlayerExample.vcxproj" (build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:26.13
