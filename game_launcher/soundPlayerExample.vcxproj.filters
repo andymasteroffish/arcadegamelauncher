@@ -48,6 +48,27 @@
     <ClCompile Include="src\ofxXmlSettings_win\src\ofxXmlSettings.cpp">
       <Filter>addons</Filter>
     </ClCompile>
+    <ClCompile Include="src\ofxGamepadFalcon\example\src\gamepadExampleApp.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ofxGamepadFalcon\example\src\main.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ofxGamepadFalcon\src\ofxGamepad.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ofxGamepadFalcon\src\ofxGamepadCamera.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ofxGamepadFalcon\src\ofxGamepadHandler.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ofxGamepadFalcon\src\ofxGamepadLinux.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ofxGamepadFalcon\src\ofxGamepadOIS.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\ofApp.h">
@@ -82,6 +103,132 @@
     </ClInclude>
     <ClInclude Include="src\ofxXmlSettings_win\src\ofxXmlSettings.h">
       <Filter>addons</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ofxGamepadFalcon\example\src\gamepadExampleApp.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ofxGamepadFalcon\libs\wgois\include\linux\EventHelpers.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ofxGamepadFalcon\libs\wgois\include\linux\LinuxForceFeedback.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ofxGamepadFalcon\libs\wgois\include\linux\LinuxInputManager.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ofxGamepadFalcon\libs\wgois\include\linux\LinuxJoyStickEvents.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ofxGamepadFalcon\libs\wgois\include\linux\LinuxKeyboard.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ofxGamepadFalcon\libs\wgois\include\linux\LinuxMouse.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ofxGamepadFalcon\libs\wgois\include\linux\LinuxPrereqs.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ofxGamepadFalcon\libs\wgois\include\mac\MacHelpers.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ofxGamepadFalcon\libs\wgois\include\mac\MacHIDManager.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ofxGamepadFalcon\libs\wgois\include\mac\MacInputManager.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ofxGamepadFalcon\libs\wgois\include\mac\MacJoyStick.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ofxGamepadFalcon\libs\wgois\include\mac\MacKeyboard.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ofxGamepadFalcon\libs\wgois\include\mac\MacMouse.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ofxGamepadFalcon\libs\wgois\include\mac\MacPrereqs.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ofxGamepadFalcon\libs\wgois\include\OIS.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ofxGamepadFalcon\libs\wgois\include\OISConfig.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ofxGamepadFalcon\libs\wgois\include\OISEffect.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ofxGamepadFalcon\libs\wgois\include\OISEvents.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ofxGamepadFalcon\libs\wgois\include\OISException.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ofxGamepadFalcon\libs\wgois\include\OISFactoryCreator.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ofxGamepadFalcon\libs\wgois\include\OISForceFeedback.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ofxGamepadFalcon\libs\wgois\include\OISInputManager.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ofxGamepadFalcon\libs\wgois\include\OISInterface.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ofxGamepadFalcon\libs\wgois\include\OISJoyStick.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ofxGamepadFalcon\libs\wgois\include\OISKeyboard.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ofxGamepadFalcon\libs\wgois\include\OISMouse.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ofxGamepadFalcon\libs\wgois\include\OISMultiTouch.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ofxGamepadFalcon\libs\wgois\include\OISObject.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ofxGamepadFalcon\libs\wgois\include\OISPrereqs.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ofxGamepadFalcon\libs\wgois\include\win32\Win32ForceFeedback.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ofxGamepadFalcon\libs\wgois\include\win32\Win32InputManager.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ofxGamepadFalcon\libs\wgois\include\win32\Win32JoyStick.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ofxGamepadFalcon\libs\wgois\include\win32\Win32KeyBoard.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ofxGamepadFalcon\libs\wgois\include\win32\Win32Mouse.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ofxGamepadFalcon\libs\wgois\include\win32\Win32Prereqs.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ofxGamepadFalcon\src\ofxGamepad.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ofxGamepadFalcon\src\ofxGamepadCamera.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ofxGamepadFalcon\src\ofxGamepadConfigs.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ofxGamepadFalcon\src\ofxGamepadHandler.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ofxGamepadFalcon\src\ofxGamepadLinux.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ofxGamepadFalcon\src\ofxGamepadOIS.h">
+      <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
