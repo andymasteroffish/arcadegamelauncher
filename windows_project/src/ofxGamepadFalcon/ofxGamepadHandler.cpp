@@ -74,7 +74,7 @@ void ofxGamepadHandler::updatePadList() {
 #if defined OIS_WIN32_PLATFORM
 		if(hWnd == 0)
 		{
-			HWND windowHandle = FindWindow(NULL, L"PARTICLE MACE");
+			HWND windowHandle = FindWindow(NULL, L"Friendly Game Home");
 			std::ostringstream wnd;		
 			wnd << (size_t)windowHandle;
 						

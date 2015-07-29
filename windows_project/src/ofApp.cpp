@@ -20,6 +20,8 @@ bool iconSortAlphabetical(  GameIcon * a, GameIcon * b ) {
 void ofApp::setup(){
     ofEnableSmoothing();
     ofEnableAlphaBlending();
+
+	ofSetWindowTitle("Friendly Game Home"); //you must set this as the title in ofxGamepadHandler.cpp line 77
     
     ofBackground( 250, 230, 255);
     
@@ -156,7 +158,7 @@ void ofApp::draw(){
     ofSetColor(0);
     ofDrawBitmapString(debugInfo, 8,15);
     
-
+	controllerManager.drawDebug();
 }
 
 //--------------------------------------------------------------

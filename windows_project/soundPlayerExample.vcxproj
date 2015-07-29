@@ -81,7 +81,7 @@
       <PrecompiledHeader />
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat />
-      <AdditionalIncludeDirectories>src\ofxXmlSettings_win\libs;src\ofxXmlSettings_win\src;%(AdditionalIncludeDirectories);..\..\..\addons\ofxGamepadFalcon\libs;..\..\..\addons\ofxGamepadFalcon\src;..\..\..\addons\ofxGamepadFalcon\libs\wgois;..\..\..\addons\ofxGamepadFalcon\libs\wgois\include;..\..\..\addons\ofxGamepadFalcon\libs\wgois\include\linux;..\..\..\addons\ofxGamepadFalcon\libs\wgois\include\mac;..\..\..\addons\ofxGamepadFalcon\libs\wgois\include\win32;..\..\..\addons\ofxGamepadFalcon\libs\wgois\lib;..\..\..\addons\ofxGamepadFalcon\libs\wgois\lib\vs2008;..\..\..\addons\ofxGamepadFalcon\libs\wgois\lib\vs2010;src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src\ofxGamepadFalcon;src\ofxXmlSettings_win\libs;src\ofxXmlSettings_win\src;%(AdditionalIncludeDirectories);src</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>

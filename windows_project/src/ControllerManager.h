@@ -11,7 +11,7 @@
 
 #include "ofMain.h"
 #include "BasicInfo.h"
-
+#include "ofxGamepadHandler.h"
 
 class ControllerManager{
 public:
@@ -21,14 +21,22 @@ public:
     void setup();
     void update();
     
+	void drawDebug();
+
     bool isButtonPressed(BUTTON_TYPE button);
     
     
     void keyPressed(int key);
     void keyReleased(int key);
+
+	void axisChanged(ofxGamepadAxisEvent &e);
+    void buttonPressed(ofxGamepadButtonEvent &e);
     
     
     bool justTapped[NUM_BUTTONS];
+
+	//this needs to be expaded to take multiple gamepads into account. Just for testing right now
+	bool axisCanTapLeft, axisCanTapRight, axisCanTapUp, axisCanTapDown;
     
 };
 
