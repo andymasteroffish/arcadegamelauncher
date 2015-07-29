@@ -86,6 +86,7 @@
 		0A7DE4CE1B68465300E1A317 /* tinyxmlparser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tinyxmlparser.cpp; sourceTree = "<group>"; };
 		0A7DE4D01B68465300E1A317 /* ofxXmlSettings.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxXmlSettings.cpp; sourceTree = "<group>"; };
 		0A7DE4D11B68465300E1A317 /* ofxXmlSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxXmlSettings.h; sourceTree = "<group>"; };
+		0AB934FA1B698B3500EB6AFC /* SystemSpecificInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SystemSpecificInfo.h; path = system_specific_mac/SystemSpecificInfo.h; sourceTree = "<group>"; };
 		0AEB661B1B65377500D02D68 /* SortingButtonBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SortingButtonBase.cpp; sourceTree = "<group>"; };
 		0AEB661C1B65377500D02D68 /* SortingButtonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SortingButtonBase.h; sourceTree = "<group>"; };
 		0AEB661E1B653B2B00D02D68 /* SortingButtonToggle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SortingButtonToggle.cpp; sourceTree = "<group>"; };
@@ -269,6 +270,7 @@
 				0A4864271B6348390018AB41 /* ControllerManager.h */,
 				0A4864261B6348390018AB41 /* ControllerManager.cpp */,
 				0AEB661A1B65374300D02D68 /* SortingOptions */,
+				0AB934FA1B698B3500EB6AFC /* SystemSpecificInfo.h */,
 			);
 			path = src;
 			sourceTree = SOURCE_ROOT;

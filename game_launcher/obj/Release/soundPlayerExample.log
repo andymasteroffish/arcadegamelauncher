@@ -1,17 +1,16 @@
-﻿Build started 7/28/2015 7:36:05 PM.
-     1>Project "C:\Users\Andy\Documents\of_v0.7.4_vs2010_release\apps\arcadegamelauncher\game_launcher\soundPlayerExample.vcxproj" on node 2 (build target(s)).
+﻿Build started 7/28/2015 8:47:56 PM.
+     1>Project "C:\Users\Andy\Documents\of_v0.7.4_vs2010_release\apps\arcadegamelauncher\windows_project\soundPlayerExample.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
-         Touching "obj\Release\soundPlayerExample.unsuccessfulbuild".
+         Creating "obj\Release\soundPlayerExample.unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
-         All outputs are up-to-date.
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Isrc\ofxGamepadFalcon /Isrc\ofxXmlSettings_win\libs /Isrc\ofxXmlSettings_win\src /I..\..\..\libs\openFrameworks /I..\..\..\libs\openFrameworks\graphics /I..\..\..\libs\openFrameworks\app /I..\..\..\libs\openFrameworks\sound /I..\..\..\libs\openFrameworks\utils /I..\..\..\libs\openFrameworks\communication /I..\..\..\libs\openFrameworks\video /I..\..\..\libs\openFrameworks\types /I..\..\..\libs\openFrameworks\math /I..\..\..\libs\openFrameworks\3d /I..\..\..\libs\openFrameworks\gl /I..\..\..\libs\openFrameworks\events /I..\..\..\libs\glut\include /I..\..\..\libs\rtAudio\include /I..\..\..\libs\quicktime\include /I..\..\..\libs\freetype\include /I..\..\..\libs\freetype\include\freetype2 /I..\..\..\libs\freeImage\include /I..\..\..\libs\fmodex\include /I..\..\..\libs\videoInput\include /I..\..\..\libs\glew\include\ /I..\..\..\libs\glu\include /I..\..\..\libs\tess2\include /I..\..\..\libs\cairo\include\cairo /I..\..\..\libs\poco\include /I..\..\..\addons /Isrc /nologo /W3 /WX- /O2 /Oy- /D WIN32 /D NDEBUG /D _CONSOLE /D POCO_STATIC /D CAIRO_WIN32_STATIC_BUILD /D DISABLE_SOME_FLOATING_POINT /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"obj\Release\\" /Fd"obj\Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt src\ControllerManager.cpp
+         ControllerManager.cpp
        Link:
-         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"bin\soundPlayerExample.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:..\..\..\libs\glut\lib\vs2010 /LIBPATH:..\..\..\libs\rtAudio\lib\vs2010 /LIBPATH:..\..\..\libs\FreeImage\lib\vs2010 /LIBPATH:..\..\..\libs\freetype\lib\vs2010 /LIBPATH:..\..\..\libs\quicktime\lib\vs2010 /LIBPATH:..\..\..\libs\fmodex\lib\vs2010 /LIBPATH:..\..\..\libs\videoInput\lib\vs2010 /LIBPATH:..\..\..\libs\cairo\lib\vs2010 /LIBPATH:..\..\..\libs\glew\lib\vs2010 /LIBPATH:..\..\..\libs\glu\lib\vs2010 /LIBPATH:..\..\..\libs\Poco\lib\vs2010 /LIBPATH:..\..\..\libs\tess2\lib\vs2010 "cairo-static.lib" "pixman-1.lib" msimg32.lib OpenGL32.lib GLu32.lib kernel32.lib setupapi.lib Vfw32.lib comctl32.lib glut32.lib rtAudioD.lib videoInput.lib libfreetype.lib FreeImage.lib qtmlClient.lib dsound.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib glew32s.lib fmodex_vc.lib glu32.lib PocoFoundationmd.lib PocoNetmd.lib PocoUtilmd.lib PocoXMLmd.lib Ws2_32.lib tess2.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /NODEFAULTLIB:PocoFoundationd.lib /NODEFAULTLIB:atlthunk.lib /NODEFAULTLIB:LIBC.lib /NODEFAULTLIB:LIBCMT /MANIFEST /ManifestFile:"obj\Release\soundPlayerExample.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /PDB:"C:\Users\Andy\Documents\of_v0.7.4_vs2010_release\apps\arcadegamelauncher\game_launcher\bin\soundPlayerExample.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /TLBID:1 /DYNAMICBASE:NO /IMPLIB:"bin\soundPlayerExample.lib" /MACHINE:X86 obj\Release\Background.obj
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"bin\soundPlayerExample.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:..\..\..\libs\glut\lib\vs2010 /LIBPATH:..\..\..\libs\rtAudio\lib\vs2010 /LIBPATH:..\..\..\libs\FreeImage\lib\vs2010 /LIBPATH:..\..\..\libs\freetype\lib\vs2010 /LIBPATH:..\..\..\libs\quicktime\lib\vs2010 /LIBPATH:..\..\..\libs\fmodex\lib\vs2010 /LIBPATH:..\..\..\libs\videoInput\lib\vs2010 /LIBPATH:..\..\..\libs\cairo\lib\vs2010 /LIBPATH:..\..\..\libs\glew\lib\vs2010 /LIBPATH:..\..\..\libs\glu\lib\vs2010 /LIBPATH:..\..\..\libs\Poco\lib\vs2010 /LIBPATH:..\..\..\libs\tess2\lib\vs2010 "cairo-static.lib" "pixman-1.lib" msimg32.lib OpenGL32.lib GLu32.lib kernel32.lib setupapi.lib Vfw32.lib comctl32.lib glut32.lib rtAudioD.lib videoInput.lib libfreetype.lib FreeImage.lib qtmlClient.lib dsound.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib glew32s.lib fmodex_vc.lib glu32.lib PocoFoundationmd.lib PocoNetmd.lib PocoUtilmd.lib PocoXMLmd.lib Ws2_32.lib tess2.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /NODEFAULTLIB:PocoFoundationd.lib /NODEFAULTLIB:atlthunk.lib /NODEFAULTLIB:LIBC.lib /NODEFAULTLIB:LIBCMT /MANIFEST /ManifestFile:"obj\Release\soundPlayerExample.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /PDB:"C:\Users\Andy\Documents\of_v0.7.4_vs2010_release\apps\arcadegamelauncher\windows_project\bin\soundPlayerExample.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /TLBID:1 /DYNAMICBASE:NO /IMPLIB:"bin\soundPlayerExample.lib" /MACHINE:X86 obj\Release\Background.obj
          obj\Release\ControllerManager.obj
          obj\Release\GameIcon.obj
          obj\Release\main.obj
          obj\Release\ofApp.obj
-         obj\Release\gamepadExampleApp.obj
-         obj\Release\main.obj
          obj\Release\ofxGamepad.obj
          obj\Release\ofxGamepadCamera.obj
          obj\Release\ofxGamepadHandler.obj
@@ -25,20 +24,30 @@
          obj\Release\SortingButtonBase.obj
          obj\Release\SortingButtonNumber.obj
          obj\Release\SortingButtonToggle.obj
+         src\ofxGamepadFalcon\OIS_vs2010_static.lib
+         src\ofxGamepadFalcon\OIS_vs2010_static_d.lib
          C:\Users\Andy\Documents\of_v0.7.4_vs2010_release\libs\openFrameworksCompiled\lib\vs2010\openframeworksLib.lib
-     1>obj\Release\main.obj : warning LNK4042: object specified more than once; extras ignored
             Creating library bin\soundPlayerExample.lib and object bin\soundPlayerExample.exp
-     1>ofxGamepadHandler.obj : error LNK2019: unresolved external symbol "public: static void __cdecl OIS::InputManager::destroyInputSystem(class OIS::InputManager *)" (?destroyInputSystem@InputManager@OIS@@SAXPAV12@@Z) referenced in function "public: void __thiscall ofxGamepadHandler::updatePadList(void)" (?updatePadList@ofxGamepadHandler@@QAEXXZ)
-     1>ofxGamepadHandler.obj : error LNK2019: unresolved external symbol "public: class OIS::Object * __thiscall OIS::InputManager::createInputObject(enum OIS::Type,bool,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &)" (?createInputObject@InputManager@OIS@@QAEPAVObject@2@W4Type@2@_NABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z) referenced in function "public: void __thiscall ofxGamepadHandler::updatePadList(void)" (?updatePadList@ofxGamepadHandler@@QAEXXZ)
-     1>ofxGamepadOIS.obj : error LNK2001: unresolved external symbol "public: class OIS::Object * __thiscall OIS::InputManager::createInputObject(enum OIS::Type,bool,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &)" (?createInputObject@InputManager@OIS@@QAEPAVObject@2@W4Type@2@_NABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z)
-     1>ofxGamepadHandler.obj : error LNK2019: unresolved external symbol "public: int __thiscall OIS::InputManager::getNumberOfDevices(enum OIS::Type)" (?getNumberOfDevices@InputManager@OIS@@QAEHW4Type@2@@Z) referenced in function "public: void __thiscall ofxGamepadHandler::updatePadList(void)" (?updatePadList@ofxGamepadHandler@@QAEXXZ)
-     1>ofxGamepadHandler.obj : error LNK2019: unresolved external symbol "public: static class OIS::InputManager * __cdecl OIS::InputManager::createInputSystem(class std::multimap<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,struct std::less<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >,class std::allocator<struct std::pair<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const ,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > > > &)" (?createInputSystem@InputManager@OIS@@SAPAV12@AAV?$multimap@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V12@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V12@@std@@@2@@std@@@Z) referenced in function "public: void __thiscall ofxGamepadHandler::updatePadList(void)" (?updatePadList@ofxGamepadHandler@@QAEXXZ)
-     1>ofxGamepadOIS.obj : error LNK2019: unresolved external symbol "public: static char const * __cdecl OIS::Effect::getEffectTypeName(enum OIS::Effect::EType)" (?getEffectTypeName@Effect@OIS@@SAPBDW4EType@12@@Z) referenced in function "public: void __thiscall ofxGamepadOIS::updateJoystick(class OIS::JoyStick *)" (?updateJoystick@ofxGamepadOIS@@QAEXPAVJoyStick@OIS@@@Z)
-     1>ofxGamepadOIS.obj : error LNK2019: unresolved external symbol "public: class std::multimap<enum OIS::Effect::EForce,enum OIS::Effect::EType,struct std::less<enum OIS::Effect::EForce>,class std::allocator<struct std::pair<enum OIS::Effect::EForce const ,enum OIS::Effect::EType> > > const & __thiscall OIS::ForceFeedback::getSupportedEffects(void)const " (?getSupportedEffects@ForceFeedback@OIS@@QBEABV?$multimap@W4EForce@Effect@OIS@@W4EType@23@U?$less@W4EForce@Effect@OIS@@@std@@V?$allocator@U?$pair@$$CBW4EForce@Effect@OIS@@W4EType@23@@std@@@6@@std@@XZ) referenced in function "public: void __thiscall ofxGamepadOIS::updateJoystick(class OIS::JoyStick *)" (?updateJoystick@ofxGamepadOIS@@QAEXPAVJoyStick@OIS@@@Z)
-     1>ofxGamepadOIS.obj : error LNK2019: unresolved external symbol "public: int __thiscall OIS::JoyStick::getNumberOfComponents(enum OIS::ComponentType)const " (?getNumberOfComponents@JoyStick@OIS@@QBEHW4ComponentType@2@@Z) referenced in function "public: void __thiscall ofxGamepadOIS::updateJoystick(class OIS::JoyStick *)" (?updateJoystick@ofxGamepadOIS@@QAEXPAVJoyStick@OIS@@@Z)
-     1>bin\soundPlayerExample.exe : fatal error LNK1120: 7 unresolved externals
-     1>Done Building Project "C:\Users\Andy\Documents\of_v0.7.4_vs2010_release\apps\arcadegamelauncher\game_launcher\soundPlayerExample.vcxproj" (build target(s)) -- FAILED.
+         soundPlayerExample.vcxproj -> C:\Users\Andy\Documents\of_v0.7.4_vs2010_release\apps\arcadegamelauncher\windows_project\bin\soundPlayerExample.exe
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"bin\soundPlayerExample.exe;#1" /manifest obj\Release\soundPlayerExample.exe.intermediate.manifest
+       PostBuildEvent:
+         Description: adding DLLs and creating data folder
+         xcopy /e /i /y "C:\Users\Andy\Documents\of_v0.7.4_vs2010_release\apps\arcadegamelauncher\windows_project\..\..\..\export\vs2010\*.dll" "C:\Users\Andy\Documents\of_v0.7.4_vs2010_release\apps\arcadegamelauncher\windows_project\bin"
+         :VCEnd
+         C:\Users\Andy\Documents\of_v0.7.4_vs2010_release\apps\arcadegamelauncher\windows_project\..\..\..\export\vs2010\Assimp32.dll
+         C:\Users\Andy\Documents\of_v0.7.4_vs2010_release\apps\arcadegamelauncher\windows_project\..\..\..\export\vs2010\fmodex.dll
+         C:\Users\Andy\Documents\of_v0.7.4_vs2010_release\apps\arcadegamelauncher\windows_project\..\..\..\export\vs2010\fmodexL.dll
+         C:\Users\Andy\Documents\of_v0.7.4_vs2010_release\apps\arcadegamelauncher\windows_project\..\..\..\export\vs2010\FreeImage.dll
+         C:\Users\Andy\Documents\of_v0.7.4_vs2010_release\apps\arcadegamelauncher\windows_project\..\..\..\export\vs2010\FreeType-6.dll
+         C:\Users\Andy\Documents\of_v0.7.4_vs2010_release\apps\arcadegamelauncher\windows_project\..\..\..\export\vs2010\glut32.dll
+         C:\Users\Andy\Documents\of_v0.7.4_vs2010_release\apps\arcadegamelauncher\windows_project\..\..\..\export\vs2010\Zlib.dll
+         7 File(s) copied
+       FinalizeBuildStatus:
+         Deleting file "obj\Release\soundPlayerExample.unsuccessfulbuild".
+         Touching "obj\Release\soundPlayerExample.lastbuildstate".
+     1>Done Building Project "C:\Users\Andy\Documents\of_v0.7.4_vs2010_release\apps\arcadegamelauncher\windows_project\soundPlayerExample.vcxproj" (build target(s)).
 
-Build FAILED.
+Build succeeded.
 
-Time Elapsed 00:00:00.34
+Time Elapsed 00:00:02.38
