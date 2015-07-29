@@ -9,6 +9,7 @@
 #ifndef game_launcher_Header_h
 #define game_launcher_Header_h
 
+#include "SystemSpecificInfo.h"
 
 //gamepad stuff
 

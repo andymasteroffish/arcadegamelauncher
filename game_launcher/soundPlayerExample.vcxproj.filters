@@ -188,6 +188,9 @@
     <ClInclude Include="src\ofxGamepadFalcon\OISMouse.h">
       <Filter>src\libraries\ofxGamepadFalcon</Filter>
     </ClInclude>
+    <ClInclude Include="src\system_specific_win\SystemSpecificInfo.h">
+      <Filter>src</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Library Include="src\ofxGamepadFalcon\OIS_vs2010_static.lib">

@@ -81,7 +81,7 @@
       <PrecompiledHeader />
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat />
-      <AdditionalIncludeDirectories>src\ofxGamepadFalcon;src\ofxXmlSettings_win\libs;src\ofxXmlSettings_win\src;%(AdditionalIncludeDirectories);src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src\system_specific_win;src\ofxGamepadFalcon;src\ofxXmlSettings_win\libs;src\ofxXmlSettings_win\src;%(AdditionalIncludeDirectories);src</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
@@ -162,6 +162,7 @@
     <ClInclude Include="src\SortingButtonBase.h" />
     <ClInclude Include="src\SortingButtonNumber.h" />
     <ClInclude Include="src\SortingButtonToggle.h" />
+    <ClInclude Include="src\system_specific_win\SystemSpecificInfo.h" />
   </ItemGroup>
   <ItemGroup>
     <Library Include="src\ofxGamepadFalcon\OIS_vs2010_static.lib" />
