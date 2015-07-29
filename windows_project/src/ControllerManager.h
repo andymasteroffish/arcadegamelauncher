@@ -11,7 +11,10 @@
 
 #include "ofMain.h"
 #include "BasicInfo.h"
+
+#ifdef USING_WIN
 #include "ofxGamepadHandler.h"
+#endif
 
 class ControllerManager{
 public:
@@ -28,9 +31,13 @@ public:
     
     void keyPressed(int key);
     void keyReleased(int key);
+    
+#ifdef USING_WIN
 
 	void axisChanged(ofxGamepadAxisEvent &e);
     void buttonPressed(ofxGamepadButtonEvent &e);
+    
+#endif
     
     
     bool justTapped[NUM_BUTTONS];

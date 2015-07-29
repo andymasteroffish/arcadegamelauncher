@@ -10,6 +10,7 @@
 
 
 void ControllerManager::setup(){
+#ifdef USING_WIN
 	ofxGamepadHandler::get()->enableHotplug();
     
 	 if(ofxGamepadHandler::get()->getNumPads()>0){
@@ -18,6 +19,7 @@ void ControllerManager::setup(){
 			ofAddListener(pad->onAxisChanged, this, &ControllerManager::axisChanged);
 			ofAddListener(pad->onButtonPressed, this, &ControllerManager::buttonPressed);
 	 }
+#endif
 
 	 for (int i=0; i<NUM_BUTTONS; i++){
 		 justTapped[i] = false;
@@ -35,7 +37,9 @@ void ControllerManager::update(){
 }
 
 void ControllerManager::drawDebug(){
-	ofxGamepadHandler::get()->draw(10,10);
+#ifdef USING_WIN
+    ofxGamepadHandler::get()->draw(10,10);
+#endif
 }
 
 
@@ -81,7 +85,7 @@ void ControllerManager::keyReleased(int key){
 }
 
 
-
+#ifdef USING_WIN
 //--------------------------------------------------------------
 void ControllerManager::axisChanged(ofxGamepadAxisEvent& e)
 {
@@ -134,3 +138,5 @@ void ControllerManager::buttonPressed(ofxGamepadButtonEvent& e)
 		justTapped[BUTTON_Y] = true;
 	}
 }
+
+#endif
