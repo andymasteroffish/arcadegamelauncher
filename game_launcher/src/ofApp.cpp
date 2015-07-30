@@ -25,7 +25,7 @@ void ofApp::setup(){
     
     ofBackground( 250, 230, 255);
     
-    debugHideIcons = false;
+    debugHideIcons = true;
     
     curState = STATE_HOME;
     
@@ -47,20 +47,18 @@ void ofApp::setup(){
     //make our icons
     checkForGames();
     
-    //testing
-//    for (int i=0; i<25; i++){
-//        GameIcon newIcon;
-//        newIcon.setup(baseIconWidth, baseIconHeight);
-//        icons.push_back(newIcon);
-//    }
     
     setIconScale(0.8);
     
     cursorPos = 0;
     
-    background.setup();
-    
-    bgCol = bgTargetCol;
+    //setup our backgorunds
+    backgrounds.push_back(new BackgroundMountains());
+    backgrounds.push_back(new BackgroundTiles());
+    for (int i=0; i<backgrounds.size(); i++){
+        backgrounds[i]->setup();
+    }
+    curBackground = 1;
     
     prevFrameTime = ofGetElapsedTimef();
     deltaTime = 0;
@@ -79,7 +77,7 @@ void ofApp::update(){
     scrollPos = (1-scrollXeno) * scrollPos + scrollXeno * targetScrollPos;
     
     //update everything that gets updted no matter what
-    background.update(deltaTime);
+    backgrounds[curBackground]->update(deltaTime);
     
     for (int i=0; i<icons.size(); i++){
         icons[i]->update(deltaTime);
@@ -136,7 +134,7 @@ void ofApp::checkControl(){
 //--------------------------------------------------------------
 void ofApp::draw(){
     
-    background.draw(scrollPos);
+    backgrounds[curBackground]->draw(scrollPos);
     
     ofPushMatrix();
     ofTranslate(0, -scrollPos);
@@ -149,14 +147,14 @@ void ofApp::draw(){
     
     ofPopMatrix();
     
-    optionsBar.draw();
-    
-    string debugInfo = "";
-    debugInfo += "scale: "+ofToString(iconScale)+"\n";
-    debugInfo += "cols: "+ofToString(cols)+"\n";
-    debugInfo += "rows: "+ofToString(rows)+"\n";
-    ofSetColor(0);
-    ofDrawBitmapString(debugInfo, 8,15);
+//    optionsBar.draw();
+//    
+//    string debugInfo = "";
+//    debugInfo += "scale: "+ofToString(iconScale)+"\n";
+//    debugInfo += "cols: "+ofToString(cols)+"\n";
+//    debugInfo += "rows: "+ofToString(rows)+"\n";
+//    ofSetColor(0);
+//    ofDrawBitmapString(debugInfo, 8,15);
     
 	controllerManager.drawDebug();
 }
@@ -177,15 +175,17 @@ void ofApp::keyPressed(int key){
         setIconScale( iconScale+0.1);
     }
     
-    
-    
-    
     if (key == 'i'){
         debugHideIcons = !debugHideIcons;
     }
     
+    if (key == 'b'){
+        scrollBackground(1);
+    }
     
-    cout<<key<<endl;
+    
+    
+   //cout<<"key <<key<<endl;
 }
 
 //--------------------------------------------------------------
@@ -324,12 +324,16 @@ void ofApp::setScrollTarget(){
     if (targetScrollPos < -scrollMaxPadding){
         targetScrollPos = -scrollMaxPadding;
     }
-    float bottomVal = rows * (iconHeight+iconSpacing) + iconHeight  + scrollMaxPadding - ofGetHeight();
+    maxScroll = rows * (iconHeight+iconSpacing) + iconHeight  + scrollMaxPadding - ofGetHeight();
     //cout<<"the limit "<<bottomVal<<endl;
-    if (targetScrollPos > bottomVal){
-        targetScrollPos = bottomVal;
+    if (targetScrollPos > maxScroll){
+        targetScrollPos = maxScroll;
     }
-    //cout<<"target "<<targetScrollPos<<endl;
+    cout<<"target "<<targetScrollPos<<endl;
+    
+    for (int i=0; i<backgrounds.size(); i++){
+        backgrounds[i]->setScrollExtremes(maxScroll, -scrollMaxPadding);
+    }
 }
 
 
@@ -430,6 +434,19 @@ void ofApp::sortGames(){
 }
 
 
+
+//--------------------------------------------------------------
+void ofApp::scrollBackground(int dir){
+    curBackground += dir;
+    
+    if (curBackground < 0){
+        curBackground = backgrounds.size()-1;
+    }
+    if (curBackground >= backgrounds.size()){
+        curBackground = 0;
+    }
+    
+}
 
 
 

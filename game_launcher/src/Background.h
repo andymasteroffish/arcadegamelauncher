@@ -14,23 +14,15 @@
 class Background{
 public:
     
-    void setup();
+    virtual void setup(){}
     
-    void update(float deltaTime);
-    void draw(float scrollPos);
-    
-    void drawSection(float yPos, int sectionID);
-    
-    
-    int spaceBetweenSections;
-    
-    int numPoints;
-    float sectionHeight;
-    
-    float horzNoiseSpeed;
-    float vertNoiseSpeed;
+    virtual void update(float deltaTime){}
+    virtual  void draw(float scrollPos){}
     
 
+    void setScrollExtremes(int _maxScroll, int _minScroll);
+    
+    int maxScroll, minScroll;
     
     
 };

@@ -169,4 +169,5 @@ dependencies: \
   ../../../libs/openFrameworks/video/ofVideoPlayer.h \
   ../../../libs/openFrameworks/video/ofQTKitPlayer.h \
   ../../../libs/openFrameworks/3d/ofCamera.h \
-  ../../../libs/openFrameworks/3d/ofEasyCam.h src/BasicInfo.h
+  ../../../libs/openFrameworks/3d/ofEasyCam.h src/BasicInfo.h \
+  /Users/andywallace/Documents/of_v0.8.4_osx_release/apps/arcadegamelauncher/game_launcher/src/system_specific_mac/SystemSpecificInfo.h

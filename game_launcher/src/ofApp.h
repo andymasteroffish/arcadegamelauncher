@@ -7,6 +7,8 @@
 #include "OptionsBar.h"
 
 #include "Background.h"
+#include "BackgroundMountains.h"
+#include "BackgroundTiles.h"
 
 #include "ControllerManager.h"
 
@@ -40,6 +42,8 @@ public:
     
     void sortGames();
     
+    void scrollBackground(int dir);
+    
     //what we're doing right now
     GAME_STATE curState;
     
@@ -64,6 +68,7 @@ public:
     
     //moving around;
     float scrollPos, targetScrollPos;
+    float maxScroll;
     float scrollXeno;
     float targetScrollOffset;
     float scrollMaxPadding;
@@ -71,11 +76,10 @@ public:
     //controllers
     ControllerManager controllerManager;
     
-    //fucking around with the background color
-    ofVec3f bgCol, bgTargetCol;
     
     //background
-    Background background;
+    vector<Background *> backgrounds;
+    int curBackground;
     
     
     //debug
